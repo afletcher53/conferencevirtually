@@ -78,7 +78,7 @@ $font-family: 'Poppins', sans-serif;
 $light-green-color: #FF0000;
 $white-color: #FCFFF7;
 $black-color: #0e314c;
-$navlink-color: #086788;
+$navlink-color: $white-color;
 $paragraph-color: #6084a4;
 $purple-color: #F0C808;
 $bg-color: #FCFFF7;
@@ -426,14 +426,14 @@ Navbar CSS
 
         &.is-sticky {
             box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
-            background-color: $white-color !important;
+            background-color: $hosting-main-color !important;
             padding: {
                 top: 15px;
                 bottom: 15px;
             };
         }
         &.navbar-style-two {
-            background-color: $white-color;
+            background-color: transparent;
             padding: {
                 top: 15px;
                 bottom: 15px;
@@ -469,10 +469,10 @@ Navbar CSS
 
                 a {
                     font: {
-                        weight: 500;
-                        size: 15px;
+                        weight: 500i;
+                        size: 17px;
                     }
-                    color: $navlink-color;
+                    color: $light-green-color;
                     padding: {
                         left: 0;
                         right: 0;
@@ -484,7 +484,7 @@ Navbar CSS
                         right: 14px;
                     }
                     &:hover, &:focus, &.active {
-                        color: $light-green-color;
+                        color: $purple-color;
                     }
                     .feather {
                         width: 14px;
@@ -492,7 +492,10 @@ Navbar CSS
                         top: 1.5px;
                     }
 
+
                 }
+
+
                 .dropdown_menu {
                     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
                     background: $white-color;
@@ -599,6 +602,7 @@ Navbar CSS
                     background: transparent;
                     border: 2px dashed $light-green-color;
                     padding: 12px 33px;
+                    color: $purple-color;
                     margin: {
                         right: 10px;
                     }
