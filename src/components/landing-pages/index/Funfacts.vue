@@ -1,0 +1,129 @@
+
+<script>
+import IOdometer from 'vue-odometer';
+import 'odometer/themes/odometer-theme-default.css';
+
+export default {
+    name: 'Funfacts',
+    components: {
+        IOdometer
+    },
+    data() {
+        return {
+            webinars: 10000,
+            hours: 10000000,
+            conferences: 3,
+            customers: 1000 ,
+            email: 'admin@conferencevirtually.com',
+          }
+    },
+    mounted() {
+        const that = this;
+        setInterval(function() {
+            that.webinars += 1;
+        }, 3000);
+        setInterval(function() {
+            that.hours += 1;
+        }, 5000);
+        setInterval(function() {
+            that.conferences += 1;
+        }, 20000);
+        setInterval(function() {
+            that.customers += 1;
+        }, 1000);
+    }
+}
+</script>
+
+
+<template>
+  <!-- Start Fun Facts Area -->
+  <section class="funfacts-area ptb-80">
+    <div class="container">
+      <div class="section-title">
+        <h2>Serving medical communities. Online, everywhere.</h2>
+        <div class="bar" />
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-6 col-sm-3">
+          <div class="funfact">
+            <h3>
+              <span class="odometer">
+                <IOdometer
+                  class="odometer"
+                  :value="webinars"
+                  :duration="200"
+                />
+              </span>+
+            </h3>
+            <p>Webinars Served</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-6 col-sm-3">
+          <div class="funfact">
+            <h3>
+              <span class="odometer">
+                <IOdometer
+                  class="odometer"
+                  :value="hours"
+                  :duration="200"
+                />
+              </span>+
+            </h3>
+            <p>Certified CPD Hours</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-6 col-sm-3">
+          <div class="funfact">
+            <h3>
+              <span class="odometer">
+                <IOdometer
+                  class="odometer"
+                  :value="conferences"
+                  :duration="200"
+                />
+              </span>+
+            </h3>
+            <p>Virtual Conferences Held</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-6 col-sm-3">
+          <div class="funfact">
+            <h3>
+              <span class="odometer">
+                <IOdometer
+                  class="odometer"
+                  :value="customers"
+                  :duration="200"
+                />
+              </span>+
+            </h3>
+            <p>Customers</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-cta-box">
+        <h3>Have any question about us?</h3>
+        <p>Don't hesitate to contact us</p>
+        <a
+          :href="'mailto:' + email"
+          class="btn btn-primary"
+        >Contact Us</a>
+      </div>
+
+      <div class="map-bg">
+        <img
+          src="../../../assets/img/map.png"
+          alt="map"
+        >
+      </div>
+    </div>
+  </section>
+  <!-- End Fun Facts Area -->
+</template>
