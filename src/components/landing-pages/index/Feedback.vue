@@ -18,13 +18,13 @@
             >
               <div
                 v-for="item in reviewJson"
-                :key="item.date"
+                :key="item.author"
                 class="item"
               >
                 <div class="single-repair-feedback">
                   <h3>{{ item.author }}</h3>
-            
-                  <p>{{ item.text }}</p>
+
+                  <p v-html="item.text" />
                 </div>
               </div>
             </slick>

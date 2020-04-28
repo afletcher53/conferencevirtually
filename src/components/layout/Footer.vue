@@ -57,7 +57,7 @@ export default {
             </ul>
             <ul class="social-links">
               <li
-                v-for="social in socialmedia"
+                v-for="social in $store.state.project_social_media"
                 :key="social.id"
               >
                 <a

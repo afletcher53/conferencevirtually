@@ -15,10 +15,10 @@ export default new Vuex.Store({
         project_copywrite_slug: 'Copyright ©2020. All Rights Reserved. Website created by <a href="http://www.aaronfletcher.co.uk">Aaron Fletcher</a>',
         project_landing_video_id: 'PDlRFxYM2t4',
         project_social_media: [
-          {class: "facebook", to: "/content", id: '1'},
-          {class: "twitter", to: "/content", id: '2'},
-          {class: "linkedin", to: "/content", id:'3'},
-          {class: "instagram", to: "/content", id: '4'}
+          {class: "facebook", to: "https://www.facebook.com/anthony.chadwick.501", id: '1'},
+          {class: "twitter", to: "https://twitter.com/anthonychadwic6?lang=en", id: '2'},
+          {class: "linkedin", to: "https://www.linkedin.com/in/anthonychadwick/?originalSubdomain=uk", id:'3'},
+
         ]
     },
 

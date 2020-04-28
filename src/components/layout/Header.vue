@@ -79,7 +79,7 @@ export default {
 
           <div class="others-option">
             <a
-              href="/contact"
+              :href="'mailto:' + $store.state.project_email"
               class="btn btn-light"
             >Contact Us</a>
           </div>

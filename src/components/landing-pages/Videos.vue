@@ -1,3 +1,28 @@
+<script>
+
+import moment from 'moment'
+import getVideosApi from '@/services/api/vidoes.js'
+
+export default {
+    name: 'BlogGrid',
+    data(){
+        return {
+          videos:[],
+          base_url_youtube :'http://www.youtube.com/'
+        }
+    },
+    created() {
+      getVideosApi.getVideoes().then(data => this.videos = data.items)},
+  methods: {
+       format_date(value){
+          if (value) {
+            return moment(String(value)).format('DD-MM-YYYY')
+           }
+       },
+    }
+}
+</script>
+
 <template>
   <div>
     <!-- Start Page Title -->
@@ -74,12 +99,12 @@
           >
             <div class="single-blog-post">
               <div class="blog-image">
-                <a href="#">
-                  <img
-                    :src="item.snippet.thumbnails.high.url"
-                    alt="image"
-                  >
-                </a>
+                <img
+                  href="#"
+                  :src="item.snippet.thumbnails.high.url"
+                  alt="image"
+                >
+
 
                 <div class="date">
                   <feather type="calendar" />     {{ format_date(item.snippet.publishedAt ) }}
@@ -87,9 +112,12 @@
               </div>
 
               <div class="blog-post-content">
-                <h3><a href="#"> {{ item.snippet.title }}</a></h3>
-
-                <span>by <a href="http://www.TheWebinarVet.com">TheWebinarVet</a></span>
+                <h3>
+                  <a
+                    :href="'http://www.youtube.com/watch?v=' + item.id.videoId"
+                    v-html="item.snippet.title"
+                  />
+                </h3>
                 <a
                   href="#"
                   class="read-more-btn"
@@ -102,27 +130,3 @@
     </section>
   </div>
 </template>
-<script>
-
-import moment from 'moment'
-import getVideosApi from '@/services/api/vidoes.js'
-
-export default {
-    name: 'BlogGrid',
-    data(){
-        return {
-          videos:[],
-          base_url_youtube :'http://www.youtube.com/'
-        }
-    },
-    created() {
-      getVideosApi.getVideoes().then(data => this.videos = data.items)},
-  methods: {
-       format_date(value){
-          if (value) {
-            return moment(String(value)).format('DD-MM-YYYY')
-           }
-       },
-    }
-}
-</script>

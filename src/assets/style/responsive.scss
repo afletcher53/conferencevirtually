@@ -14,6 +14,8 @@ $value_seven: 1550px;
     .btn {
         font-size: 13px;
         padding: 13px 33px;
+        display: flex;
+        justify-content: center;
     }
     .ptb-80 {
         padding: {
@@ -31,7 +33,7 @@ $value_seven: 1550px;
     .owl-theme {
         .owl-dots {
             margin-top: 5px;
-            
+
             .owl-dot {
                 span {
                     width: 12px;
@@ -82,13 +84,11 @@ $value_seven: 1550px;
     }
     .hosting-main-banner {
         height: 100%;
-        padding: {
-            top: 170px;
-            bottom: 75px;
-        }
-        .hosting-banner-content {            
+
+        .hosting-banner-content {
             h1 {
                 font-size: 25px;
+                padding-top: 100px;
             }
             ul {
                 li {
@@ -96,6 +96,7 @@ $value_seven: 1550px;
                 }
             }
             p {
+                text-align: justify;
                 font-size: 16px;
                 margin: {
                     bottom: 25px;
@@ -202,7 +203,7 @@ $value_seven: 1550px;
     .services-right-image {
         text-align: center;
         margin-top: 45px;
-        
+
         img {
             display: none;
             position: relative;
@@ -247,7 +248,7 @@ $value_seven: 1550px;
             font-size: 17px;
         }
     }
-    
+
     .features-area {
         padding-bottom: 20px;
     }
@@ -349,7 +350,7 @@ $value_seven: 1550px;
             margin-top: 15px;
         }
     }
-    
+
     .works-area {
         padding-bottom: 20px;
     }
@@ -720,8 +721,7 @@ $value_seven: 1550px;
     .coming-soon-area {
         height: 100%;
         padding: {
-            top: 170px;
-            bottom: 170px;
+
         }
         .social-list {
             bottom: 20px;
@@ -810,7 +810,7 @@ $value_seven: 1550px;
     }
     #productsModalCenter {
         z-index: 999999;
-        
+
         .modal-content {
             button {
                 &.close {
@@ -820,7 +820,7 @@ $value_seven: 1550px;
             .products-content {
                 text-align: center;
                 padding: 25px 10px;
-    
+
                 h3 {
                     font-size: 17px;
                 }
@@ -1308,7 +1308,7 @@ $value_seven: 1550px;
             }
         }
     }
-    
+
     .ml-main-banner {
         background-position: center center;
         padding: {
@@ -1345,7 +1345,7 @@ $value_seven: 1550px;
             top: 130px;
             bottom: 140px;
         };
-        .ml-banner-content {    
+        .ml-banner-content {
             h1 {
                 font-size: 25px;
             }
@@ -1773,7 +1773,7 @@ $value_seven: 1550px;
             font-size: 20px;
         }
     }
-    
+
     .footer-area {
         padding-top: 50px;
     }
@@ -1869,7 +1869,7 @@ $value_seven: 1550px;
             height: 45%;
         }
     }
-    
+
     .ml-main-banner {
         .container-fluid {
             max-width: 540px;
@@ -1923,7 +1923,7 @@ $value_seven: 1550px;
                     .dropdown_menu {
                         left: auto;
                         right: 0;
-                        
+
                         li {
                             .dropdown_menu {
                                 left: -250px;
@@ -1944,7 +1944,7 @@ $value_seven: 1550px;
         .banner-image {
             text-align: center;
             margin-top: 45px;
-            
+
             img {
                 position: relative;
                 display: none;
@@ -1967,10 +1967,6 @@ $value_seven: 1550px;
     }
     .hosting-main-banner {
         height: 100%;;
-        padding: {
-            top: 185px;
-            bottom: 165px;
-        }
         .hosting-banner-content {
             h1 {
                 font-size: 30px;
@@ -2042,7 +2038,7 @@ $value_seven: 1550px;
     .services-right-image {
         text-align: center;
         margin-top: 45px;
-        
+
         img {
             display: none;
             position: relative;
@@ -2085,7 +2081,7 @@ $value_seven: 1550px;
             }
         }
     }
-    
+
     .single-features {
         padding-left: 20px;
 
@@ -2290,7 +2286,7 @@ $value_seven: 1550px;
         top: 0;
         transform: unset;
         margin-top: 80px;
-            
+
         img {
             &:first-child {
                 max-width: 100%;
@@ -2345,7 +2341,7 @@ $value_seven: 1550px;
     .copyright-area {
         margin-top: 50px;
     }
-    
+
     .ml-main-banner {
         background-position: center center;
         padding-top: 150px;
@@ -2378,7 +2374,7 @@ $value_seven: 1550px;
             top: 150px;
             bottom: 140px;
         };
-        .ml-banner-content {    
+        .ml-banner-content {
             h1 {
                 font-size: 30px;
             }
@@ -2766,7 +2762,7 @@ $value_seven: 1550px;
             }
         }
     }
-    
+
     .ml-projects-slides {
         &.owl-theme {
             .owl-dots {

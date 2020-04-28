@@ -636,8 +636,10 @@ Navbar CSS
 }
 // Mobile Navbar
 
-@media only screen and (max-width: 1575px) {
-
+@media only screen and (max-width: 1276px) {
+  .hidden-sm {
+    display: none;
+  }
 }
 @media only screen and (max-width: 767px) {
 
@@ -3257,7 +3259,7 @@ Blog CSS
         }
         .date {
             position: absolute;
-            left: 20px;
+            left: 33%;
             bottom: -20px;
             background: $gradient-color;
             color: $white-color;
@@ -3302,7 +3304,7 @@ Blog CSS
         }
         .read-more-btn {
             color: $black-color;
-
+            margin-top: 15px;
             i {
                 transition: $transition;
                 width: 15px;
@@ -5551,59 +5553,11 @@ Repair Feedback CSS
     margin-bottom: 55px;
     position: relative;
     text-align: center;
-    padding: {
-        left: 40px;
-        right: 40px;
-        top: 40px;
-        bottom: 40px;
-    }
-    .client-img {
-        position: relative;
-        text-align: left;
-        margin-bottom: 40px;
-        display: inline-block;
-        padding: {
-            left: 108px;
-            top: 18px;
-        }
-        img {
-            border-radius: 50%;
-            border: 2px solid $light-green-color;
-            padding: 3px;
-            display: inline-block;
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 90px;
-            height: 90px;
-        }
-        h3 {
-            font-size: 18px;
-            margin: 0;
-        }
-        span {
-            display: block;
-            color: $purple-color;
-            margin: {
-                top: 8px;
-            }
-        }
-    }
+
     p {
         font-size: 15px;
     }
-    &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: -25px;
-        width: 50px;
-        height: 50px;
-        background: $white-color;
-        right: 0;
-        margin: 0 auto;
-        transform: rotate(45deg);
-    }
+
     &::after {
         content: "\f11b";
         color: #d9dcde;
@@ -5615,7 +5569,7 @@ Repair Feedback CSS
         }
         position: absolute;
         top: 0;
-        left: 25px;
+        left: 0px;
     }
 }
 
@@ -5697,6 +5651,7 @@ IoT Main Banner CSS
         &:nth-child(4) {
             animation: 4.2s ease-out 3.5s infinite normal none running pulsei;
         }
+
     }
 }
 @keyframes pulsei {
@@ -5775,7 +5730,7 @@ Iot Services CSS
 
     .content{
       border-style: solid;
-      border-color: $white-color;
+      border-color: $purple-color;
       position: absolute;
       top: 0px;
       bottom: 0px;
@@ -5783,19 +5738,18 @@ Iot Services CSS
       right: 0px;
       opacity: 0;
       transition: .5s ease;
-      background-color: $hosting-main-color;
+      background-color: $purple-color;
       padding-bottom: 30px;
       .text{
-
-     color: $white-color;
-     font-size: 20px;
+     font-size: 36px;
      position: absolute;
+     z-index: 99;
       top: 50%;
-    left: 50%;
--webkit-transform: translate(-50%, -50%);
--ms-transform: translate(-50%, -50%);
-transform: translate(-50%, -50%);
-text-align: center;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
   }
   }
   &:hover {
@@ -5822,7 +5776,7 @@ text-align: center;
         visibility: hidden;
     }
     h3 {
-        color: $black-color;
+        color: black;
         font-size: 36px;
         transition: $transition;
         line-height: 1.5;
@@ -5834,7 +5788,7 @@ text-align: center;
             visibility: visible;
         }
         h3 {
-            color: $black-color;
+            color: black;
         }
     }
 }
