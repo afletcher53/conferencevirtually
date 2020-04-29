@@ -3,8 +3,7 @@
     <Header />
     <PreLoader v-if="isLoading" />
     <router-view />
-    <div v-if="currentUrl == '/not-found' || currentUrl == '/coming-soon'" />
-    <Footer v-else />
+    <Footer />
   </div>
 </template>
 
@@ -30,7 +29,7 @@ export default {
     '$route'(pathUrl){
       this.currentUrl = pathUrl.path;
       this.isLoading = true;
-      setTimeout(() => { this.isLoading = false }, 1500);
+      setTimeout(() => { this.isLoading = false }, 500);
     }
   },
 
@@ -38,7 +37,7 @@ export default {
     this.currentUrl = window.location.pathname;
     setTimeout(() => {
       this.isLoading = false
-    }, 2000);
+    }, 1500);
   }
 }
 </script>

@@ -750,7 +750,7 @@ Main Banner CSS
     position: relative;
     height: 910px;
     z-index: 1;
-    background: transparent url(../img/banner-bg1.jpg) right top no-repeat;
+
 
     .hero-content {
         h1 {
@@ -1278,7 +1278,7 @@ About CSS
 Why Choose US CSS
 =================================================*/
 .why-choose-us {
-    background: transparent url(../img/banner-bg1.jpg) right top no-repeat;
+
     position: relative;
     z-index: 1;
 
@@ -3054,7 +3054,7 @@ Feedback CSS
         height: 260px;
         content: '';
         z-index: -1;
-        background-image: url(../img/layer.png);
+
     }
     &::after {
         position: absolute;
@@ -3064,7 +3064,7 @@ Feedback CSS
         height: 260px;
         content: '';
         z-index: -1;
-        background-image: url(../img/layer.png);
+
     }
     .VueCarousel-pagination {
         position: absolute;
@@ -4316,15 +4316,7 @@ Sidebar Widget CSS
                         repeat: no-repeat;
                         position: center center !important;
                     }
-                    &.bg1 {
-                        background-image: url(../img/blog-image/7.jpg);
-                    }
-                    &.bg2 {
-                        background-image: url(../img/blog-image/8.jpg);
-                    }
-                    &.bg3 {
-                        background-image: url(../img/blog-image/9.jpg);
-                    }
+
                 }
             }
             .info {
@@ -4902,7 +4894,6 @@ Coming Soon CSS
 404 Error CSS
 =================================================*/
 .error-area {
-    height: 100vh;
 }
 .error-content {
     text-align: center;
@@ -4923,7 +4914,7 @@ Coming Soon CSS
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            background: url(../img/oops-bg.jpg) no-repeat;
+
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background: {
@@ -5257,24 +5248,6 @@ Repair Services CSS
         position: center center;
         size: cover;
         repeat: no-repeat;
-    }
-    &.bg1 {
-        background-image: url(../img/repair-services-img/1.jpg);
-    }
-    &.bg2 {
-        background-image: url(../img/repair-services-img/2.jpg);
-    }
-    &.bg3 {
-        background-image: url(../img/repair-services-img/3.jpg);
-    }
-    &.bg4 {
-        background-image: url(../img/repair-services-img/4.jpg);
-    }
-    &.bg5 {
-        background-image: url(../img/repair-services-img/5.jpg);
-    }
-    &.bg6 {
-        background-image: url(../img/repair-services-img/6.jpg);
     }
     &::before {
         position: absolute;
@@ -5976,7 +5949,7 @@ ML Main Banner CSS
         bottom: 140px;
     };
     background: {
-        image: url(../img/banner-bg.jpg);
+
         position: bottom right;
         size: cover;
         repeat: no-repeat;
@@ -6016,7 +5989,7 @@ ML Main Banner CSS
         bottom: 240px;
     };
     background: {
-        image: url(../img/banner-bg.jpg);
+
         position: bottom right;
         size: cover;
         repeat: no-repeat;
@@ -7237,7 +7210,6 @@ Agency CTA CSS
     position: relative;
     z-index: 1;
     background: {
-        image: url(../img/agency-image/gradient-bg.jpg);
         position: center center;
         size: cover;
         repeat: no-repeat;

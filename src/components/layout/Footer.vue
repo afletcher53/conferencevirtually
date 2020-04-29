@@ -51,7 +51,7 @@ export default {
             <h3>Address</h3>
 
             <ul class="footer-contact-info">
-              <li><feather type="map-pin" /> {{ $store.state.project_address }}</li>
+              <li><feather type="map-pin" /> <a href='https://goo.gl/maps/yb5gAbtEgZ85AENh6'>{{ $store.state.project_address }}</a></li>
               <li><feather type="mail" /> Email: <a :href="'mailto:' + $store.state.project_email">{{ $store.state.project_email }}</a></li>
               <li><feather type="phone-call" /> Phone:  <a :href="'tel:' + $store.state.project_telephone">{{ $store.state.project_telephone }}</a></li>
             </ul>

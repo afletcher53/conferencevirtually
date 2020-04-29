@@ -19,7 +19,17 @@ export default new Vuex.Store({
           {class: "twitter", to: "https://twitter.com/anthonychadwic6?lang=en", id: '2'},
           {class: "linkedin", to: "https://www.linkedin.com/in/anthonychadwick/?originalSubdomain=uk", id:'3'},
 
-        ]
+        ],
+        project_services: [
+          {class: "Certifcation", to: "https://www.facebook.com/anthony.chadwick.501", id: '1', text: "Lorem ipsum dolor sit amet elit, adipiscing, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.", image: require( "@/assets/img/home/logo/wv-logo-community.png")},
+          {class: "Communities", to: "https://twitter.com/anthonychadwic6?lang=en", id: '2',  text: "Lorem ipsum dolor sit amet elit, adipiscing, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.", image: require("@/assets/img/home/logo/wv-logo-screen.png")},
+          {class: "Webinars", to: "https://www.linkedin.com/in/anthonychadwick/?originalSubdomain=uk", id:'3',  text: "Lorem ipsum dolor sit amet elit, adipiscing, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.", image: require("@/assets/img/home/logo/wv-logo-certifcate.png")},
+
+        ],
+        project_services_title: 'What We Provide',
+        project_services_strapline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        project_funfacts_title: 'Serving Medical Communities. Online, Everywhere.',
+        project_funfacts_strapline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
 
     // getters are Vuex's equivalent to computed properties in Vue.
