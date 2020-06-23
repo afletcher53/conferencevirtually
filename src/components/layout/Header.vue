@@ -51,6 +51,7 @@ export default {
             <img
               src="../../assets/img/logo.png"
               alt="logo"
+              style="width: 200px;"
             >
           </router-link>
 

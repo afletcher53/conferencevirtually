@@ -16,12 +16,8 @@ export const router = new VueRouter({
     },
     routes: [
       { path: '/', component: Index, name: 'home' },
-      { path: '/videos', component: Videos },
-      { path: '/about', component: About },
-      {
- // catch all 404 - define at the very end
- path: "*",
- component: NotFound
- }
+      { path: '/videos', component: Videos, name: 'Videos' },
+      { path: '/about', component: About, name: 'About' },
+      { path: "*", component: NotFound, name: 'NotFound' }
     ]
 });

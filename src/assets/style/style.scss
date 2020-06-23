@@ -69,25 +69,15 @@ This files table contents are outlined below>>>>>
 ** - Go Top CSS
 */
 
+// Imports
+
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+@import 'base/typography';
+
 /*================================================
 Default CSS
 =================================================*/
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
-
-$font-family: 'Poppins', sans-serif;
-$light-green-color: #FF0000;
-$white-color: #FCFFF7;
-$black-color: #0e314c;
-$navlink-color: $white-color;
-$paragraph-color: #6084a4;
-$purple-color: #F0C808;
-$bg-color: #FCFFF7;
-$bg-color2: #f9f6f6;
-$hosting-main-color: #0e314c;
-$gradient-color: linear-gradient(135deg,#71b4d4 0%, #073b53 100%);
-$gradient-color2: linear-gradient(135deg, $light-green-color 0%, $black-color 100%);
-$transition: .5s;
-$font-size: 14px;
 
 body {
     font-family: $font-family;
@@ -107,7 +97,7 @@ a {
     outline: 0 !important;
 
     &:hover, &:focus {
-        color: $light-green-color;
+        color: $accent-color-secondary;
         text-decoration: none;
     }
 }
@@ -122,6 +112,19 @@ a {
 p {
     color: $paragraph-color;
     line-height: 1.9;
+    text-align: left;
+    line-height: 200%;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.cptext {
+    color: $paragraph-color;
+    line-height: 1.9;
+    text-align: left;
+    line-height: 200%;
 
     &:last-child {
         margin-bottom: 0;
@@ -165,16 +168,15 @@ p {
             top: 0 !important;
         };
         &.VueCarousel-dot--active, &:hover {
-            background-color: $light-green-color !important;
+            background-color: $accent-color-secondary !important;
         }
     }
 }
 /*btn btn-primary*/
 .btn-primary {
     color: $white-color;
-    background-color: $light-green-color;
+    background-color: $accent-color-secondary;
     box-shadow: 0 13px 27px 0 rgba(68, 206, 111, .25);
-
     &:hover, &:focus, &:active {
         color: $white-color;
         background: $black-color;
@@ -195,7 +197,42 @@ p {
     }
     &.disabled, &:disabled {
         color: $white-color;
-        background-color: $light-green-color;
+        background-color: $accent-color-secondary;
+        box-shadow: 0 13px 27px 0 rgba(68, 206, 111, .25);
+        opacity: 1;
+
+        &:hover, &:focus {
+            background: $black-color;
+            box-shadow: 0 13px 27px 0 rgba(198, 121, 227, .25);
+        }
+    }
+}
+.btn-primary1 {
+    color: $white-color;
+    background-color: $accent-color-secondary;
+    box-shadow: 0 13px 27px 0 rgba(68, 206, 111, .25);
+    margin-left: -100px;
+    &:hover, &:focus, &:active {
+        color: $white-color;
+        background: $black-color;
+        transform: translateY(-5px);
+        box-shadow: 0 13px 27px 0 rgba(198, 121, 227, .25);
+    }
+    &.focus, &:focus {
+        box-shadow: unset;
+    }
+    &:not(:disabled):not(.disabled).active:focus, &:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+        box-shadow: unset;
+    }
+    &:not(:disabled):not(.disabled).active, &:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+        color: $white-color;
+        background: $black-color;
+        transform: translateY(-5px);
+        box-shadow: 0 13px 27px 0 rgba(198, 121, 227, .25);
+    }
+    &.disabled, &:disabled {
+        color: $white-color;
+        background-color: $accent-color-secondary;
         box-shadow: 0 13px 27px 0 rgba(68, 206, 111, .25);
         opacity: 1;
 
@@ -225,7 +262,7 @@ p {
         height: 100%;
         width: 0;
         transition: $transition;
-        background: $purple-color;
+        background: $accent-color;
         z-index: -1;
     }
     &::after {
@@ -247,7 +284,7 @@ p {
     &.btn-secondary {
         text-transform: capitalize;
         border-radius: 0;
-        background-color: $light-green-color;
+        background-color: $accent-color-secondary;
         padding: 13px 30px;
         box-shadow: 5px 5px 5px #a6f5be;
         margin: {
@@ -260,16 +297,16 @@ p {
         };
         &::before {
             border-radius: 0;
-            background: $purple-color;
+            background: $accent-color;
         }
         &::after {
             border-radius: 0;
-            background: $purple-color;
+            background: $accent-color;
         }
         &:not(:disabled):not(.disabled).active, &:not(:disabled):not(.disabled):active, .show>&.dropdown-toggle {
             color: $white-color;
-            background-color: $light-green-color;
-            border-color: $light-green-color;
+            background-color: $accent-color-secondary;
+            border-color: $accent-color-secondary;
         }
         &:not(:disabled):not(.disabled).active:focus, &:not(:disabled):not(.disabled):active:focus, .show>&.dropdown-toggle:focus {
             box-shadow: 5px 5px 5px #e9caf5;
@@ -308,7 +345,7 @@ label {
         outline: 0;
         background: $white-color;
         box-shadow: unset;
-        border-color: $light-green-color;
+        border-color: $accent-color-secondary;
     }
 }
 /*Section Title*/
@@ -329,7 +366,6 @@ label {
           size: 16px;
           weight: 400;
       }
-        max-width: 520px;
         margin: 0 auto;
     }
     .bar {
@@ -348,7 +384,7 @@ label {
             height: 10px;
             width: 10px;
             border-radius: 50%;
-            background: $light-green-color;
+            background: $accent-color-secondary;
             animation-duration: 3s;
             animation-timing-function: linear;
             animation-iteration-count: infinite;
@@ -357,7 +393,7 @@ label {
     }
     .sub-title {
         display: inline-block;
-        color: $purple-color;
+        color: $accent-color;
         background-color: #f5dffd;
         margin-bottom: 18px;
         border-radius: 30px;
@@ -384,7 +420,7 @@ Preloader CSS
     width: 100%;
     height: 100%;
     z-index: 9999999;
-    background: $light-green-color;
+    background: $accent-color-secondary;
 
     .spinner {
         width: 60px;
@@ -469,10 +505,10 @@ Navbar CSS
 
                 a {
                     font: {
-                        weight: 500i;
+                        weight: 500;
                         size: 17px;
                     }
-                    color: $light-green-color;
+                    color: $accent-color-secondary;
                     padding: {
                         left: 0;
                         right: 0;
@@ -484,7 +520,7 @@ Navbar CSS
                         right: 14px;
                     }
                     &:hover, &:focus, &.active {
-                        color: $purple-color;
+                        color: $accent-color;
                     }
                     .feather {
                         width: 14px;
@@ -518,7 +554,7 @@ Navbar CSS
                     li {
                         position: relative;
                         padding: 0;
-
+                            
                         a {
                             font: {
                                 size: 14px;
@@ -530,7 +566,7 @@ Navbar CSS
                             color: $navlink-color;
 
                             &:hover, &:focus, &.active {
-                                color: $light-green-color;
+                                color: $accent-color-secondary;
                             }
                         }
                         .dropdown_menu {
@@ -545,7 +581,7 @@ Navbar CSS
                                     color: $navlink-color;
 
                                     &:hover, &:focus, &.active {
-                                        color: $light-green-color;
+                                        color: $accent-color-secondary;
                                     }
                                 }
                             }
@@ -557,7 +593,7 @@ Navbar CSS
                                 top: -20px !important;
                             }
                             a {
-                                color: $light-green-color;
+                                color: $accent-color-secondary;
                             }
                         }
                     }
@@ -600,9 +636,9 @@ Navbar CSS
             .btn {
                 &.btn-light {
                     background: transparent;
-                    border: 2px dashed $light-green-color;
+                    border: 2px dashed $accent-color-secondary;
                     padding: 12px 33px;
-                    color: $purple-color;
+                    color: $accent-color;
                     margin: {
                         right: 10px;
                     }
@@ -611,18 +647,18 @@ Navbar CSS
                     }
                     &:hover, &:focus {
                         color: $white-color;
-                        border-color: $light-green-color;
+                        border-color: $accent-color-secondary;
                     }
                     &::after, &::before {
-                        background: $light-green-color;
+                        background: $accent-color-secondary;
                     }
                 }
                 &.btn-primary {
-                    background: $purple-color;
+                    background: $accent-color;
                     box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
 
                     &::after, &::before {
-                        background: $light-green-color;
+                        background: $accent-color-secondary;
                         box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
                     }
                 }
@@ -680,7 +716,6 @@ Navbar CSS
                 };
                 .nav-item {
                     padding: 10px 0;
-
                     a {
                         margin-left: 0;
                         margin-right: 0;
@@ -882,6 +917,7 @@ Main Banner CSS
             }
             color: $white-color;
             margin-bottom: 25px;
+            margin-left: -100px;
         }
         ul {
             padding: 0;
@@ -901,7 +937,7 @@ Main Banner CSS
                     transform: translateY(-50%);
                     width: 20px;
                     height: 2px;
-                    background: $light-green-color;
+                    background: $accent-color-secondary;
                     content: '';
                 }
                 &:last-child {
@@ -915,6 +951,7 @@ Main Banner CSS
             margin: {
                 bottom: 30px;
                 top: 25px;
+                left: -100px;
             }
             span {
                 text-decoration: line-through;
@@ -1159,7 +1196,7 @@ Boxes CSS
         line-height: 70px;
         background: #cdf1d8;
         border-radius: 50%;
-        color: $light-green-color;
+        color: $accent-color-secondary;
         transition: $transition;
     }
     h3 {
@@ -1199,7 +1236,7 @@ Boxes CSS
         border-color: #edc3fc;
 
         .icon {
-            color: $purple-color;
+            color: $accent-color;
             background: #edc3fc;
         }
     }
@@ -1221,7 +1258,7 @@ Boxes CSS
         }
         .icon {
             background: $white-color;
-            color: $light-green-color;
+            color: $accent-color-secondary;
         }
         h3, p {
             color: $white-color;
@@ -1233,7 +1270,7 @@ Boxes CSS
         }
         &.bg-c679e3 {
             .icon {
-                color: $purple-color;
+                color: $accent-color;
             }
         }
         &.bg-eb6b3d {
@@ -1359,7 +1396,7 @@ Why Choose US CSS
     margin-top: 30px;
 
     .icon {
-        color: $light-green-color;
+        color: $accent-color-secondary;
         transition: $transition;
 
         i {
@@ -1476,7 +1513,7 @@ Services CSS
             top: 2px;
             margin-right: 5px;
             display: inline-block;
-            color: $light-green-color;
+            color: $accent-color-secondary;
             transition: $transition;
             width: 18px;
         }
@@ -1691,11 +1728,11 @@ Services CSS
         line-height: 70px;
         background: #cdf1d8;
         border-radius: 50%;
-        color: $light-green-color;
+        color: $accent-color-secondary;
         transition: $transition;
 
         &.bg-c679e3 {
-            color: $purple-color;
+            color: $accent-color;
             background: #edc3fc;
         }
         &.bg-eb6b3d {
@@ -1708,7 +1745,7 @@ Services CSS
         position: absolute;
         width: 0;
         height: 4px;
-        background: $light-green-color;
+        background: $accent-color-secondary;
         opacity: 0;
         visibility: hidden;
         bottom: 0;
@@ -1725,11 +1762,11 @@ Services CSS
         box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
 
         .icon {
-            background: $light-green-color;
+            background: $accent-color-secondary;
             color: $white-color;
 
             &.bg-c679e3 {
-                background: $purple-color;
+                background: $accent-color;
             }
             &.bg-eb6b3d {
                 background: #eb6b3d;
@@ -1805,7 +1842,7 @@ Services Details CSS
                         transform: unset;
                         text-align: center;
                         height: 100%;
-                        background: $light-green-color;
+                        background: $accent-color-secondary;
                         color: $white-color;
 
                         &::before, &::after {
@@ -1848,7 +1885,7 @@ Services Details CSS
 /*================================================
 Features CSS
 =================================================*/
-.features-area {
+.iot-features-area {
     padding-bottom: 50px;
 }
 .features-area-two {
@@ -1879,13 +1916,13 @@ Features CSS
         line-height: 69px;
         background: #cdf1d8;
         border-radius: 50%;
-        color: $light-green-color;
+        color: $accent-color-secondary;
         left: 20px;
         top: 30px;
         transition: $transition;
 
         &.bg-c679e3 {
-            color: $purple-color;
+            color: $accent-color;
             background: #edc3fc;
         }
         &.bg-eb6b3d {
@@ -1898,11 +1935,11 @@ Features CSS
         box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
 
         .icon {
-            background: $light-green-color;
+            background: $accent-color-secondary;
             color: $white-color;
 
             &.bg-c679e3 {
-                background: $purple-color;
+                background: $accent-color;
             }
             &.bg-eb6b3d {
                 background: #eb6b3d;
@@ -1941,11 +1978,11 @@ Features CSS
         background: #cdf1d8;
         display: inline-block;
         border-radius: 50%;
-        color: $light-green-color;
+        color: $accent-color-secondary;
         transition: $transition;
 
         &.bg-c679e3 {
-            color: $purple-color;
+            color: $accent-color;
             background: #edc3fc;
         }
         &.bg-eb6b3d {
@@ -1958,7 +1995,7 @@ Features CSS
         position: absolute;
         width: 0;
         height: 4px;
-        background: $light-green-color;
+        background: $accent-color-secondary;
         opacity: 0;
         visibility: hidden;
         bottom: 0;
@@ -1975,11 +2012,11 @@ Features CSS
         box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
 
         .icon {
-            background: $light-green-color;
+            background: $accent-color-secondary;
             color: $white-color;
 
             &.bg-c679e3 {
-                background: $purple-color;
+                background: $accent-color;
             }
             &.bg-eb6b3d {
                 background: #eb6b3d;
@@ -2013,7 +2050,7 @@ Features Details CSS
             padding-left: 15px;
 
             &::before {
-                background: $light-green-color;
+                background: $accent-color-secondary;
                 width: 8px;
                 height: 8px;
                 left: 0;
@@ -2078,7 +2115,7 @@ Features Details CSS
                         transform: unset;
                         text-align: center;
                         height: 100%;
-                        background: $light-green-color;
+                        background: $accent-color-secondary;
                         color: $white-color;
 
                         &::before, &::after {
@@ -2181,11 +2218,11 @@ Team CSS
                 margin: 0 5px;
 
                 a {
-                    color: $purple-color;
+                    color: $accent-color;
 
                     &:hover {
                         transform: translateY(-5px);
-                        color: $light-green-color;
+                        color: $accent-color-secondary;
                     }
                     svg {
                         width: 19px;
@@ -2231,7 +2268,7 @@ Team CSS
                 height: 0;
             }
             img {
-                border-color: $light-green-color;
+                border-color: $accent-color-secondary;
             }
         }
         .team-info {
@@ -2335,6 +2372,7 @@ Fun Facts CSS
 .funfacts-area {
     position: relative;
     z-index: 1;
+    @include sectionPadding;
 
     .section-title {
         h2 {
@@ -2357,7 +2395,7 @@ Fun Facts CSS
     text-align: center;
 
     h3 {
-        color: $light-green-color;
+        color: $accent-color-secondary;
         font-size: 32px;
         margin-bottom: 7px;
     }
@@ -2387,11 +2425,11 @@ Fun Facts CSS
         margin-top: -27px;
 
         &::before, &::after {
-            background: $light-green-color;
+            background: $accent-color-secondary;
         }
     }
     .btn-primary {
-        background: $purple-color;
+        background: $accent-color;
         box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
 
         &:hover, &:focus {
@@ -2452,7 +2490,7 @@ Pricing CSS
         margin-bottom: 30px;
 
         span {
-            color: $light-green-color;
+            color: $accent-color-secondary;
             font: {
                 size: 30px;
                 weight: 600;
@@ -2515,11 +2553,11 @@ Pricing CSS
             }
         }
         .btn-primary {
-            background: $purple-color;
+            background: $accent-color;
             box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
 
             &::after, &::before {
-                background: $light-green-color;
+                background: $accent-color-secondary;
                 box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
             }
         }
@@ -2554,7 +2592,7 @@ Pricing CSS
         margin-bottom: 20px;
 
         span {
-            color: $light-green-color;
+            color: $accent-color-secondary;
             font: {
                 size: 30px;
                 weight: 600;
@@ -2595,11 +2633,11 @@ Pricing CSS
     }
     &.active-plan {
         .btn-primary {
-            background: $purple-color;
+            background: $accent-color;
             box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
 
             &::after, &::before {
-                background: $light-green-color;
+                background: $accent-color-secondary;
                 box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
             }
         }
@@ -2739,7 +2777,7 @@ Pricing CSS
             };
             &::after {
                 border-radius: 30px;
-                background: $light-green-color;
+                background: $accent-color-secondary;
                 width: 100%;
                 opacity: 1;
                 visibility: visible;
@@ -2777,7 +2815,7 @@ Pricing CSS
                 margin-bottom: 0;
             }
             i {
-                color: $light-green-color;
+                color: $accent-color-secondary;
                 position: absolute;
                 left: 0;
                 top: 50%;
@@ -2837,7 +2875,7 @@ Domain Search CSS
             width: 22%;
             height: 55px;
             border-radius: 30px;
-            background-color: $light-green-color;
+            background-color: $accent-color-secondary;
             color: $white-color;
             font: {
                 weight: 600;
@@ -2851,7 +2889,7 @@ Domain Search CSS
             transition: $transition;
 
             &:hover, &:focus {
-                background-color: $purple-color;
+                background-color: $accent-color;
             }
         }
     }
@@ -2885,6 +2923,7 @@ Feedback CSS
 .feedback-area {
     position: relative;
     z-index: 1;
+    @include sectionPadding;
 }
 .feedback-slides {
     position: relative;
@@ -2912,7 +2951,7 @@ Feedback CSS
 
                 img {
                     border-radius: 50%;
-                    border: 2px solid $light-green-color;
+                    border: 2px solid $accent-color-secondary;
                     padding: 3px;
                     width: auto !important;
                     display: inline-block !important;
@@ -2924,7 +2963,7 @@ Feedback CSS
             }
             span {
                 display: block;
-                color: $purple-color;
+                color: $accent-color;
                 margin: {
                     top: 8px;
                     bottom: 18px;
@@ -2962,7 +3001,7 @@ Feedback CSS
                     transition: $transition;
                     display: inline-block;
                     position: relative;
-                    border: 2px solid $light-green-color;
+                    border: 2px solid $accent-color-secondary;
                     border-radius: 50%;
                     padding: 3px;
                     width: 85px;
@@ -3019,7 +3058,7 @@ Feedback CSS
         }
         &:hover {
             color: $white-color;
-            border-color: $light-green-color;
+            border-color: $accent-color-secondary;
 
             &::before {
                 opacity: 1;
@@ -3099,7 +3138,7 @@ Feedback CSS
                 display: inline-block !important;
                 width: 75px;
                 border-radius: 50%;
-                border: 3px solid $light-green-color;
+                border: 3px solid $accent-color-secondary;
             }
         }
         .title {
@@ -3110,7 +3149,7 @@ Feedback CSS
             span {
                 display: block;
                 margin-top: 8px;
-                color: $purple-color;
+                color: $accent-color;
             }
         }
     }
@@ -3155,6 +3194,7 @@ Ready To Talk CSS
         color: $white-color;
         margin-bottom: 20px;
         font-size: 16px;
+        text-align: center;
     }
     .btn {
         &::before, &::after {
@@ -3162,7 +3202,7 @@ Ready To Talk CSS
         }
     }
     .btn-primary {
-        background: $purple-color;
+        background: $accent-color;
         box-shadow: 0 5px 20px 0 rgba(198, 121, 227, 0.25);
 
         &:hover, &:focus {
@@ -3302,7 +3342,7 @@ Blog CSS
                 color: $paragraph-color;
 
                 &:hover {
-                    color: $light-green-color;
+                    color: $accent-color-secondary;
                 }
             }
         }
@@ -3316,7 +3356,7 @@ Blog CSS
                 top: 3.2px;
             }
             &:hover {
-                color: $light-green-color;
+                color: $accent-color-secondary;
 
                 i {
                     margin-left: 5px;
@@ -3379,7 +3419,7 @@ Blog CSS
                         color: $paragraph-color;
 
                         &:hover {
-                            color: $light-green-color;
+                            color: $accent-color-secondary;
                         }
                     }
                     &:last-child {
@@ -3490,7 +3530,7 @@ FAQ CSS
                     transform: unset;
                     text-align: center;
                     height: 100%;
-                    background: $light-green-color;
+                    background: $accent-color-secondary;
                     color: $white-color;
 
                     &::before, &::after {
@@ -3563,7 +3603,7 @@ Pagination CSS
 
                 &:hover, &:focus {
                     color: $white-color;
-                    background-color: $light-green-color;
+                    background-color: $accent-color-secondary;
                     box-shadow: unset;
                 }
                 svg {
@@ -3573,7 +3613,7 @@ Pagination CSS
             &.active {
                 .page-link {
                     color: $white-color;
-                    background-color: $light-green-color;
+                    background-color: $accent-color-secondary;
                 }
             }
         }
@@ -3606,11 +3646,11 @@ Blog Details CSS
                         color: $paragraph-color;
 
                         &:hover {
-                            color: $light-green-color;
+                            color: $accent-color-secondary;
                         }
                     }
                     i {
-                        color: $purple-color;
+                        color: $accent-color;
                         margin-right: 2px;
                         position: relative;
                         top: 2px;
@@ -3623,7 +3663,7 @@ Blog Details CSS
                         right: -15px;
                         width: 6px;
                         height: 1px;
-                        background: $light-green-color;
+                        background: $accent-color-secondary;
                     }
                     &:last-child {
                         margin-right: 0;
@@ -3686,7 +3726,7 @@ Blog Details CSS
                 color: $paragraph-color;
 
                 i {
-                    color: $light-green-color;
+                    color: $accent-color-secondary;
                     display: inline-block;
                     width: 20px;
                     position: absolute;
@@ -3707,7 +3747,7 @@ Blog Details CSS
             a {
                 display: inline-block;
                 color: $white-color;
-                background-color: $purple-color;
+                background-color: $accent-color;
                 padding: 4px 12px;
                 border-radius: 5px;
                 margin-right: 5px;
@@ -3715,7 +3755,7 @@ Blog Details CSS
 
                 &:hover {
                     color: $white-color;
-                    background-color: $light-green-color;
+                    background-color: $accent-color-secondary;
                 }
             }
         }
@@ -3772,8 +3812,8 @@ Blog Details CSS
                 };
                 &:hover {
                     color: $white-color;
-                    background-color: $light-green-color;
-                    border-color: $light-green-color;
+                    background-color: $accent-color-secondary;
+                    border-color: $accent-color-secondary;
                 }
             }
         }
@@ -3812,7 +3852,7 @@ Blog Details CSS
             color: $paragraph-color;
 
             &:hover {
-                color: $light-green-color;
+                color: $accent-color-secondary;
             }
         }
     }
@@ -3861,7 +3901,7 @@ Blog Details CSS
             transition: $transition;
 
             &:focus {
-                border-color: $light-green-color;
+                border-color: $accent-color-secondary;
             }
         }
         .comment-form-author {
@@ -3907,7 +3947,7 @@ Blog Details CSS
             width: 100%;
 
             input {
-                background: $light-green-color;
+                background: $accent-color-secondary;
                 border: none;
                 color: $white-color;
                 padding: 11px 25px 10px;
@@ -3923,7 +3963,7 @@ Blog Details CSS
                 };
                 &:hover, &:focus {
                     color: $white-color;
-                    background-color: $purple-color;
+                    background-color: $accent-color;
                     transform: translateY(-5px);
                 }
             }
@@ -3978,7 +4018,7 @@ Blog Details CSS
                 }
             }
             .prev-link-info-wrapper {
-                color: $light-green-color;
+                color: $accent-color-secondary;
             }
         }
     }
@@ -4006,7 +4046,7 @@ Blog Details CSS
             left: 0;
             border-radius: 5px;
             opacity: 0;
-            background-color: $light-green-color;
+            background-color: $accent-color-secondary;
             visibility: hidden;
             transition: $transition;
         }
@@ -4084,7 +4124,7 @@ Blog Details CSS
                 }
             }
             .next-link-info-wrapper {
-                color: $light-green-color;
+                color: $accent-color-secondary;
             }
         }
     }
@@ -4112,7 +4152,7 @@ Blog Details CSS
             left: 0;
             border-radius: 5px;
             opacity: 0;
-            background-color: $light-green-color;
+            background-color: $accent-color-secondary;
             visibility: hidden;
             transition: $transition;
         }
@@ -4188,7 +4228,7 @@ blockquote, .blockquote {
         top: 0;
         bottom: 0;
         width: 3px;
-        background-color: $light-green-color;
+        background-color: $accent-color-secondary;
         margin: {
             top: 20px;
             bottom: 20px;
@@ -4217,7 +4257,7 @@ Sidebar Widget CSS
             &::before {
                 content: '';
                 position: absolute;
-                background: $light-green-color;
+                background: $accent-color-secondary;
                 bottom: -1px;
                 left: 0;
                 width: 50px;
@@ -4251,7 +4291,7 @@ Sidebar Widget CSS
                 transition: $transition;
 
                 &:focus {
-                    border-color: $light-green-color;
+                    border-color: $accent-color-secondary;
                 }
             }
             button {
@@ -4265,7 +4305,7 @@ Sidebar Widget CSS
                 border: none;
                 cursor: pointer;
                 color: $white-color;
-                background-color: $light-green-color;
+                background-color: $accent-color-secondary;
                 transition: $transition;
                 font-size: 20px;
 
@@ -4282,7 +4322,7 @@ Sidebar Widget CSS
                     };
                 }
                 &:hover {
-                    background-color: $purple-color;
+                    background-color: $accent-color;
                     color: $white-color;
                 }
             }
@@ -4369,7 +4409,7 @@ Sidebar Widget CSS
                     margin-bottom: 0;
                 }
                 &::before {
-                    background: $light-green-color;
+                    background: $accent-color-secondary;
                     position: absolute;
                     height: 7px;
                     width: 7px;
@@ -4382,7 +4422,7 @@ Sidebar Widget CSS
                     color: $black-color;
 
                     &:hover {
-                        color: $light-green-color;
+                        color: $accent-color-secondary;
                     }
                 }
                 .post-date {
@@ -4414,7 +4454,7 @@ Sidebar Widget CSS
                     margin-bottom: 0;
                 }
                 &::before {
-                    background: $light-green-color;
+                    background: $accent-color-secondary;
                     position: absolute;
                     height: 7px;
                     width: 7px;
@@ -4427,7 +4467,7 @@ Sidebar Widget CSS
                     color: $black-color;
 
                     &:hover {
-                        color: $light-green-color;
+                        color: $accent-color-secondary;
                     }
                 }
             }
@@ -4452,7 +4492,7 @@ Sidebar Widget CSS
                     margin-bottom: 0;
                 }
                 &::before {
-                    background: $light-green-color;
+                    background: $accent-color-secondary;
                     height: 7px;
                     width: 7px;
                     content: '';
@@ -4465,7 +4505,7 @@ Sidebar Widget CSS
                     color: $black-color;
 
                     &:hover {
-                        color: $light-green-color;
+                        color: $accent-color-secondary;
                     }
                 }
             }
@@ -4490,7 +4530,7 @@ Sidebar Widget CSS
                     margin-bottom: 0;
                 }
                 &::before {
-                    background: $light-green-color;
+                    background: $accent-color-secondary;
                     height: 7px;
                     width: 7px;
                     content: '';
@@ -4503,7 +4543,7 @@ Sidebar Widget CSS
                     display: block;
 
                     &:hover {
-                        color: $light-green-color;
+                        color: $accent-color-secondary;
                     }
                 }
                 .post-count {
@@ -4531,7 +4571,7 @@ Sidebar Widget CSS
                     margin-bottom: 0;
                 }
                 &::before {
-                    background: $light-green-color;
+                    background: $accent-color-secondary;
                     height: 7px;
                     width: 7px;
                     content: '';
@@ -4544,7 +4584,7 @@ Sidebar Widget CSS
                     color: $black-color;
 
                     &:hover {
-                        color: $light-green-color;
+                        color: $accent-color-secondary;
                     }
                 }
             }
@@ -4566,8 +4606,8 @@ Sidebar Widget CSS
             };
             &:hover, &:focus {
                 color: $white-color;
-                background-color: $light-green-color;
-                border-color: $light-green-color;
+                background-color: $accent-color-secondary;
+                border-color: $accent-color-secondary;
             }
         }
     }
@@ -4607,7 +4647,7 @@ Project Details CSS
         margin-top: 25px;
 
         &:hover {
-            color: $light-green-color;
+            color: $accent-color-secondary;
         }
     }
     &:hover {
@@ -4665,7 +4705,7 @@ Project Details CSS
                             width: 18px;
                         }
                         &:hover {
-                            color: $light-green-color;
+                            color: $accent-color-secondary;
                             transform: translateY(-5px);
                         }
                     }
@@ -4693,7 +4733,7 @@ Contact CSS
         background: $bg-color;
         border-radius: 50%;
         font-size: 30px;
-        color: $light-green-color;
+        color: $accent-color-secondary;
         transition: .4s;
     }
     h3 {
@@ -4709,7 +4749,7 @@ Contact CSS
             color: $paragraph-color;
 
             &:hover {
-                color: $light-green-color;
+                color: $accent-color-secondary;
             }
         }
     }
@@ -4718,7 +4758,7 @@ Contact CSS
 
         .icon {
             color: $white-color;
-            background: $light-green-color;
+            background: $accent-color-secondary;
         }
     }
 }
@@ -4779,7 +4819,7 @@ Coming Soon CSS
                 width: 35px;
                 height: 35px;
                 line-height: 40px;
-                background: $light-green-color;
+                background: $accent-color-secondary;
                 color: $white-color;
                 border-radius: 50%;
                 margin: 0 2px;
@@ -4800,7 +4840,7 @@ Coming Soon CSS
                     background-color: #c13584;
                 }
                 &:hover, &:focus {
-                    background-color: $light-green-color;
+                    background-color: $accent-color-secondary;
                 }
             }
         }
@@ -4847,7 +4887,7 @@ Coming Soon CSS
             right: 3px;
             top: 3px;
             height: 50px;
-            background: $light-green-color;
+            background: $accent-color-secondary;
             color: $white-color;
             border: none;
             border-radius: 40px;
@@ -4861,7 +4901,7 @@ Coming Soon CSS
                 weight: 500;
             }
             &:hover, &:focus {
-                background-color: $purple-color;
+                background-color: $accent-color;
             }
         }
     }
@@ -4872,7 +4912,7 @@ Coming Soon CSS
             border-radius: 50%;
             width: 110px;
             height: 110px;
-            color: $purple-color;
+            color: $accent-color;
             box-shadow: 0px 0px 0px 5px rgba(255,255,255,.5);
             margin: 0 10px;
             padding-top: 18px;
@@ -4979,7 +5019,7 @@ CTA CSS
         top: -15px;
 
         .btn-primary {
-            background: $purple-color;
+            background: $accent-color;
             box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
 
             &::after, &::before {
@@ -4987,7 +5027,7 @@ CTA CSS
                 box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
             }
             &:hover, &:focus {
-                color: $light-green-color;
+                color: $accent-color-secondary;
             }
         }
     }
@@ -5103,7 +5143,7 @@ Repair About CSS
 .repair-about-content {
     .sub-title {
         text-transform: uppercase;
-        color: $light-green-color;
+        color: $accent-color-secondary;
         display: block;
         font: {
             size: 15px;
@@ -5156,7 +5196,7 @@ Repair About CSS
                 i {
                     margin-right: 5px;
                     display: inline-block;
-                    color: $light-green-color;
+                    color: $accent-color-secondary;
                     transition: $transition;
                     width: 18px;
                     position: relative;
@@ -5287,7 +5327,7 @@ Repair Services CSS
     }
     .icon {
         display: inline-block;
-        color: $light-green-color;
+        color: $accent-color-secondary;
         width: 85px;
         height: 85px;
         line-height: 83px;
@@ -5338,7 +5378,7 @@ Repair Services CSS
         }
         a {
             background-color: $white-color;
-            color: $light-green-color;
+            color: $accent-color-secondary;
         }
     }
 }
@@ -5512,10 +5552,10 @@ Repair Why Choose Us CSS
         }
     }
     &:hover, &:focus {
-        border-color: $light-green-color;
+        border-color: $accent-color-secondary;
 
         a {
-            background-color: $light-green-color;
+            background-color: $accent-color-secondary;
             color: $white-color;
         }
     }
@@ -5545,7 +5585,7 @@ Repair Feedback CSS
             size: 65px;
         }
         position: absolute;
-        top: 0;
+        top: 25px;
         left: 0px;
     }
 }
@@ -5563,7 +5603,7 @@ IoT Main Banner CSS
 }
 .iot-banner-content {
     span {
-        color: $light-green-color;
+        color: $accent-color-secondary;
         font-size: 15px;
         display: block;
     }
@@ -5694,8 +5734,9 @@ IoT Partner CSS
 /*================================================
 Iot Services CSS
 =================================================*/
-.iot-services-area {
-    padding-bottom: 50px;
+.cv-services-area {
+    @include sectionPadding;
+    padding-bottom: 10rem;
 }
 .single-iot-services {
     margin-bottom: 30px;
@@ -5707,7 +5748,7 @@ Iot Services CSS
 
     .content{
       border-style: solid;
-      border-color: $purple-color;
+      border-color: $accent-color;
       position: absolute;
       top: 0px;
       bottom: 0px;
@@ -5715,12 +5756,19 @@ Iot Services CSS
       right: 0px;
       opacity: 0;
       transition: .5s ease;
-      background-color: $purple-color;
+      background-image: $gradient-color;
       padding-bottom: 30px;
+      z-index: 500;
+
+      &:hover  .text {
+        color: $white-color;
+      
+      }
       .text{
      font-size: 36px;
+     font-weight: 600;
      position: absolute;
-     z-index: 99;
+     z-index: 1000;
       top: 50%;
       left: 50%;
       -webkit-transform: translate(-50%, -50%);
@@ -5731,7 +5779,7 @@ Iot Services CSS
   }
   &:hover {
       .content {
-          opacity: 0.4;
+          opacity: 1;
           .read-more-btn {
               opacity: 1;
               visibility: visible;
@@ -5929,10 +5977,10 @@ IoT Why Choose Us CSS
         }
     }
     &:hover, &:focus {
-        border-color: $light-green-color;
+        border-color: $accent-color-secondary;
 
         a {
-            background-color: $light-green-color;
+            background-color: $accent-color-secondary;
             color: $white-color;
         }
     }
@@ -6180,7 +6228,7 @@ Our Solutions CSS
             margin-right: 3px;
         }
         &:hover {
-            color: $light-green-color;
+            color: $accent-color-secondary;
         }
     }
     &:hover {
@@ -6210,7 +6258,7 @@ ML About CSS
 
     .sub-title {
         display: inline-block;
-        color: $purple-color;
+        color: $accent-color;
         background-color: #f5dffd;
         margin-bottom: 18px;
         border-radius: 30px;
@@ -6242,7 +6290,7 @@ ML About CSS
             height: 10px;
             width: 10px;
             border-radius: 50%;
-            background: $light-green-color;
+            background: $accent-color-secondary;
             animation: {
                 duration: 3s;
                 timing-function: linear;
@@ -6297,7 +6345,7 @@ ML Services CSS
         height: 30px;
         transition: $transition;
         transform: rotate(45deg);
-        background: $light-green-color;
+        background: $accent-color-secondary;
         visibility: hidden;
         opacity: 0;
     }
@@ -6352,7 +6400,7 @@ ML Feedback CSS
         }
         span {
             display: block;
-            color: $purple-color;
+            color: $accent-color;
             margin-top: 5px;
             font-size: 13px;
         }
@@ -6475,7 +6523,7 @@ Free Trial CSS
             border: none;
             padding: 0 30px;
             line-height: 50px;
-            background-color: $light-green-color;
+            background-color: $accent-color-secondary;
             border-radius: 0 30px 30px 0;
             transition: $transition;
             color: $white-color;
@@ -6483,7 +6531,7 @@ Free Trial CSS
                 size: 16px;
             }
             &:hover {
-                background-color: $purple-color;
+                background-color: $accent-color;
                 color: $white-color;
             }
         }
@@ -6533,7 +6581,7 @@ ML Projects CSS
     }
     .plus-icon {
         a {
-            background-color: $light-green-color;
+            background-color: $accent-color-secondary;
             width: 70px;
             height: 70px;
             position: absolute;
@@ -6571,7 +6619,7 @@ ML Projects CSS
                 }
             }
             &:hover {
-                background-color: $purple-color;
+                background-color: $accent-color;
             }
         }
     }
@@ -6621,7 +6669,7 @@ ML Projects CSS
                         right: 0;
                         top: 0;
                         bottom: 0;
-                        background-color: $light-green-color;
+                        background-color: $accent-color-secondary;
                         margin: 2px;
                         content: '';
                         transition: $transition;
@@ -6631,7 +6679,7 @@ ML Projects CSS
                 }
                 &:hover, &.active {
                     span {
-                        border-color: $light-green-color !important;
+                        border-color: $accent-color-secondary !important;
                         background-color: transparent !important;
 
                         &::before {
@@ -6725,7 +6773,7 @@ Our Solutions CSS
     z-index: 1;
 
     .icon {
-        color: $light-green-color;
+        color: $accent-color-secondary;
         position: relative;
         z-index: 1;
         margin-bottom: 30px;
@@ -6758,7 +6806,7 @@ Our Solutions CSS
             margin-right: 3px;
         }
         &:hover {
-            color: $light-green-color;
+            color: $accent-color-secondary;
         }
     }
 }
@@ -6801,7 +6849,7 @@ Agency About CSS
 
     .sub-title {
         display: inline-block;
-        color: $purple-color;
+        color: $accent-color;
         background-color: #f5dffd;
         margin-bottom: 18px;
         border-radius: 30px;
@@ -6833,7 +6881,7 @@ Agency About CSS
             height: 10px;
             width: 10px;
             border-radius: 50%;
-            background: $light-green-color;
+            background: $accent-color-secondary;
             animation: {
                 duration: 3s;
                 timing-function: linear;
@@ -6911,8 +6959,8 @@ Agency Services CSS
                 margin-left: 2px;
             }
             &:hover {
-                background-color: $light-green-color;
-                border-color: $light-green-color;
+                background-color: $accent-color-secondary;
+                border-color: $accent-color-secondary;
                 color: $white-color;
             }
         }
@@ -6989,7 +7037,7 @@ Testimonials CSS
         }
         span {
             display: block;
-            color: $purple-color;
+            color: $accent-color;
             margin-top: 5px;
             font-size: 13px;
         }
@@ -7130,7 +7178,7 @@ Blog CSS
                     color: $paragraph-color;
 
                     &:hover {
-                        color: $light-green-color;
+                        color: $accent-color-secondary;
                     }
                 }
                 &::before {
@@ -7179,8 +7227,8 @@ Blog CSS
                 margin-left: 2px;
             }
             &:hover {
-                background-color: $light-green-color;
-                border-color: $light-green-color;
+                background-color: $accent-color-secondary;
+                border-color: $accent-color-secondary;
                 color: $white-color;
             }
         }
@@ -7327,7 +7375,7 @@ Footer CSS
                     color: $paragraph-color;
 
                     &:hover {
-                        color: $light-green-color;
+                        color: $accent-color-secondary;
                         padding-left: 7px;
                     }
                 }
@@ -7358,7 +7406,7 @@ Footer CSS
                     color: $paragraph-color;
 
                     &:hover {
-                        color: $light-green-color;
+                        color: $accent-color-secondary;
                     }
                 }
             }
@@ -7373,9 +7421,9 @@ Footer CSS
                     text-align: center;
                     line-height: 35px;
                     height: 32px;
-                    border: 1px solid $light-green-color;
+                    border: 1px solid $accent-color-secondary;
                     border-radius: 50%;
-                    color: $light-green-color;
+                    color: $accent-color-secondary;
 
                     i {
                         width: 15px;
@@ -7417,7 +7465,7 @@ Footer CSS
                         }
                     }
                     &:hover {
-                        background: $light-green-color;
+                        background: $accent-color-secondary;
                         color: $white-color;
                     }
                 }
@@ -7432,7 +7480,7 @@ Footer CSS
         bottom: 25px;
     }
     border-top: 1px solid #d8ebfd;
-    text-align: center;
+    text-align: center !important;
 }
 
 /*=============================
@@ -7444,7 +7492,7 @@ Go Top CSS
 	bottom: 30px;
 	right: 0;
 	color: $white-color;
-	background-color: $purple-color;
+	background-color: $accent-color;
 	z-index: 1;
 	// display: none;
 	width: 45px;
@@ -7456,7 +7504,7 @@ Go Top CSS
 
     &:hover {
         color: $white-color;
-        background: $light-green-color;
+        background: $accent-color-secondary;
     }
 }
 
@@ -7576,7 +7624,7 @@ Shop CSS
                         width: 20px;
                     }
                     &:hover, &:focus {
-                        background-color: $light-green-color;
+                        background-color: $accent-color-secondary;
                         color: $white-color;
                     }
                     &:nth-child(1) {
@@ -7649,7 +7697,7 @@ Shop CSS
                 transition: $transition;
             }
             &:hover, &:focus {
-                background-color: $light-green-color;
+                background-color: $accent-color-secondary;
                 color: $white-color;
 
                 span {
@@ -7714,7 +7762,7 @@ Shop CSS
                                 width: 20px;
                             }
                             &:hover {
-                                color: $light-green-color;
+                                color: $accent-color-secondary;
                             }
                         }
                         input {
@@ -7737,7 +7785,7 @@ Shop CSS
                     }
                 }
                 button {
-                    background: $light-green-color;
+                    background: $accent-color-secondary;
                     color: $white-color;
                     border: none;
                     height: 46px;
@@ -7749,7 +7797,7 @@ Shop CSS
                     transition: $transition;
 
                     &:hover, &:focus {
-                        background-color: $purple-color;
+                        background-color: $accent-color;
                         color: $white-color;
                     }
                 }
@@ -7815,7 +7863,7 @@ Shop Details CSS
         margin-bottom: 20px;
 
         span {
-            color: $light-green-color;
+            color: $accent-color-secondary;
         }
     }
     form {
@@ -7859,13 +7907,13 @@ Shop Details CSS
                         width: 20px;
                     }
                     &:hover {
-                        color: $light-green-color;
+                        color: $accent-color-secondary;
                     }
                 }
             }
         }
         button {
-            background: $light-green-color;
+            background: $accent-color-secondary;
             color: $white-color;
             border: none;
             height: 46px;
@@ -7877,7 +7925,7 @@ Shop Details CSS
             transition: $transition;
 
             &:hover, &:focus {
-                background-color: $purple-color;
+                background-color: $accent-color;
                 color: $white-color;
             }
         }
@@ -7897,9 +7945,9 @@ Shop Details CSS
             line-height: 45px;
 
             &:hover, &:focus {
-                background-color: $purple-color;
+                background-color: $accent-color;
                 color: $white-color;
-                border-color: $purple-color;
+                border-color: $accent-color;
             }
             .feather {
                 position: relative;
@@ -7911,11 +7959,11 @@ Shop Details CSS
             margin-top: 20px;
 
             .btn-primary {
-                background: $purple-color;
+                background: $accent-color;
                 box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
 
                 &::after, &::before {
-                    background: $light-green-color;
+                    background: $accent-color-secondary;
                     box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
                 }
             }
@@ -7959,9 +8007,9 @@ Shop Details CSS
                     text-align: center;
                     line-height: 37px;
                     height: 32px;
-                    border: 1px solid $light-green-color;
+                    border: 1px solid $accent-color-secondary;
                     border-radius: 50%;
-                    color: $light-green-color;
+                    color: $accent-color-secondary;
 
                     svg {
                         width: 15px;
@@ -8003,7 +8051,7 @@ Shop Details CSS
                         }
                     }
                     &:hover {
-                        background: $light-green-color;
+                        background: $accent-color-secondary;
                         color: $white-color;
                     }
                 }
@@ -8041,7 +8089,7 @@ Shop Details CSS
                     height: 4px;
                     top: 0;
                     left: 0;
-                    background: $light-green-color;
+                    background: $accent-color-secondary;
                 }
             }
             &.inactive {
@@ -8224,7 +8272,7 @@ Cart CSS
                             display: inline-block;
 
                             &:hover {
-                                color: $light-green-color;
+                                color: $accent-color-secondary;
                             }
                         }
                     }
@@ -8270,7 +8318,7 @@ Cart CSS
                                     width: 20px;
                                 }
                                 &:hover {
-                                    color: $light-green-color;
+                                    color: $accent-color-secondary;
                                 }
                             }
                             input {
@@ -8366,16 +8414,16 @@ Checkout CSS
     background: $white-color;
     padding: 18px 25px 15px;
     margin-bottom: 35px;
-    border-top: 3px solid $light-green-color;
+    border-top: 3px solid $accent-color-secondary;
 
     svg {
-        color: $light-green-color;
+        color: $accent-color-secondary;
         margin-right: 4px;
         width: 16px;
     }
     span {
         display: inline-block;
-        color: $light-green-color;
+        color: $accent-color-secondary;
 
         a {
             font-weight: 500;
@@ -8383,7 +8431,7 @@ Checkout CSS
             color: $black-color;
 
             &:hover, &:focus {
-                color: $light-green-color;
+                color: $accent-color-secondary;
             }
         }
     }
@@ -8474,7 +8522,7 @@ Checkout CSS
                                 display: inline-block;
 
                                 &:hover {
-                                    color: $light-green-color;
+                                    color: $accent-color-secondary;
                                 }
                             }
                         }
@@ -8530,7 +8578,7 @@ Checkout CSS
                             content: '';
                             width: 12px;
                             height: 12px;
-                            background: $light-green-color;
+                            background: $accent-color-secondary;
                             position: absolute;
                             top: 7px;
                             left: 3px;

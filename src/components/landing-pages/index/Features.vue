@@ -1,6 +1,6 @@
 <template>
   <!-- Start IoT Features Area -->
-  <section class="iot-features-area ptb-80 bg-f7fafd">
+  <section class="iot-features-area bg-f7fafd">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6 iot-features-content">

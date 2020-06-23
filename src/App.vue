@@ -2,7 +2,10 @@
   <div>
     <Header />
     <PreLoader v-if="isLoading" />
-    <router-view />
+    <transition
+      name="slide"    >
+      <router-view />
+    </transition>
     <Footer />
   </div>
 </template>

@@ -38,12 +38,12 @@ export default {
 
 <template>
   <!-- Start Fun Facts Area -->
-  <section class="funfacts-area ptb-80">
+  <section id="FunFacts" class="funfacts-area ptb-80">
     <div class="container">
       <div class="section-title">
         <h2>{{ $store.state.project_funfacts_title }}</h2>
         <div class="bar" />
-        <p>{{ $store.state.project_services_strapline }}</p>
+        <p>{{ $store.state.project_funfacts_strapline }}</p>
       </div>
 
       <div class="row">
@@ -58,7 +58,7 @@ export default {
                 />
               </span>+
             </h3>
-            <p>Webinars Served</p>
+            <p style="text-align: center;">Webinars Served</p>
           </div>
         </div>
 
@@ -73,7 +73,7 @@ export default {
                 />
               </span>+
             </h3>
-            <p>Certified CPD Hours</p>
+            <p style="text-align: center;">Certified CPD Hours</p>
           </div>
         </div>
 
@@ -88,7 +88,7 @@ export default {
                 />
               </span>+
             </h3>
-            <p>Virtual Conferences Held</p>
+            <p style="text-align: center;">Virtual Conferences Held</p>
           </div>
         </div>
 
@@ -103,14 +103,14 @@ export default {
                 />
               </span>+
             </h3>
-            <p>Customers</p>
+            <p style="text-align: center;">Customers</p>
           </div>
         </div>
       </div>
 
       <div class="contact-cta-box">
         <h3>Have any question about us?</h3>
-        <p>Don't hesitate to contact us</p>
+        <p style="text-align: center;">Don't hesitate to contact us</p>
         <a
           :href="'mailto:' + email"
           class="btn btn-primary"

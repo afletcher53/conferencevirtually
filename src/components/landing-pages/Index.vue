@@ -26,7 +26,6 @@ export default {
     <Funfacts />
     <Features />
     <FeaturesTwo />
-
     <Feedback />
   </div>
 </template>

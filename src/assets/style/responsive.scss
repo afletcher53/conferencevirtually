@@ -16,6 +16,7 @@ $value_seven: 1550px;
         padding: 13px 33px;
         display: flex;
         justify-content: center;
+        margin-left: 0px;
     }
     .ptb-80 {
         padding: {
@@ -89,6 +90,7 @@ $value_seven: 1550px;
             h1 {
                 font-size: 25px;
                 padding-top: 100px;
+                margin-left: 0px;
             }
             ul {
                 li {
@@ -101,6 +103,7 @@ $value_seven: 1550px;
                 margin: {
                     bottom: 25px;
                     top: 20px;
+                    left: 0px;
                 }
             }
         }
@@ -565,6 +568,7 @@ $value_seven: 1550px;
     }
 
     .about-image {
+        padding-top: 0px;
         margin-bottom: 45px;
     }
     .about-inner-area {

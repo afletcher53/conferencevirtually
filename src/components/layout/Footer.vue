@@ -16,12 +16,12 @@ export default {
             <div class="logo">
               <a href="/">
                 <img
-                  src="../../assets/img/logo.png"
+                  src="../../assets/img/logo-dark.png"
                   alt="logo"
                 >
               </a>
             </div>
-            <p>{{ $store.state.project_strap_line }}</p>
+            <p>{{ $store.state.project_strap_line_condensed }}</p>
           </div>
         </div>
 
@@ -29,10 +29,22 @@ export default {
           <div class="single-footer-widget pl-5">
             <h3>Company</h3>
             <ul class="list">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">FunFacts</a></li>
-              <li><a href="#">Videos</a></li>
+              <li>
+                <router-link
+                  :to=" { name: 'About' }"
+                >
+                  About
+                </router-link>
+              </li>
+              <li><a href="#Services">Services</a></li>
+              <li><a href="#FunFacts">FunFacts</a></li>
+              <li>
+                <router-link
+                  :to=" { name: 'Videos' }"
+                >
+                  Videos
+                </router-link>
+              </li>
             </ul>
           </div>
         </div>
@@ -51,7 +63,7 @@ export default {
             <h3>Address</h3>
 
             <ul class="footer-contact-info">
-              <li><feather type="map-pin" /> <a href='https://goo.gl/maps/yb5gAbtEgZ85AENh6'>{{ $store.state.project_address }}</a></li>
+              <li><feather type="map-pin" /> <a href="https://goo.gl/maps/yb5gAbtEgZ85AENh6">{{ $store.state.project_address }}</a></li>
               <li><feather type="mail" /> Email: <a :href="'mailto:' + $store.state.project_email">{{ $store.state.project_email }}</a></li>
               <li><feather type="phone-call" /> Phone:  <a :href="'tel:' + $store.state.project_telephone">{{ $store.state.project_telephone }}</a></li>
             </ul>
@@ -71,7 +83,10 @@ export default {
 
         <div class="col-lg-12 col-md-12">
           <div class="copyright-area">
-            <p v-html="$store.state.project_copywrite_slug " />
+            <p
+              style="text-align: center;"
+              v-html="$store.state.project_copywrite_slug "
+            />
           </div>
         </div>
       </div>

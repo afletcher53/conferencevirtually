@@ -8,8 +8,8 @@ return {
    socialmedia: [
         {class: "facebook", to: "/content"},
         {class: "twitter", to: "/content"},
-            {class: "linkedin", to: "/content"},
-              {class: "instagram", to: "/content"}
+        {class: "linkedin", to: "/content"},
+        {class: "instagram", to: "/content"}
 
       ]
  };
@@ -48,11 +48,11 @@ return {
                       class="hosting-banner-content"
                       style="padding-top: 10vh;"
                     >
-                      <h1 v-html="$store.state.project_name_expanded" />
-                      <p v-html="$store.state.project_strap_line" />
+                      <h1 v-html="$store.state.project_name_expanded"/>
+                      <p v-html="$store.state.project_strap_line"/>
                       <a
                         :href="'mailto:' + $store.state.project_email"
-                        class="btn btn-primary"
+                        class="btn btn-primary1"
                       >Find Out More?</a>
                     </div>
                   </div>
@@ -89,7 +89,7 @@ return {
                     <div class="agency-banner-content">
                       <ul class="social-list">
                         <li class="list-heading">
-                          Follow me for updates:
+                          Follow us for updates:
                         </li>
 
                         <li

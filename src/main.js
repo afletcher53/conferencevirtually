@@ -10,6 +10,7 @@ import './assets/style/custom.scss';
 import { router } from './router';
 import store from './store';
 
+
 Vue.config.productionTip = false
 
 Vue.use(BootstrapVue);

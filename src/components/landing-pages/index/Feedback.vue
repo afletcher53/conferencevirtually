@@ -3,9 +3,8 @@
   <section class="feedback-area ptb-80 bg-f7fafd">
     <div class="container">
       <div class="section-title">
-        <h2>What our clients are saying</h2>
+        <h2>Don't just take our word for it!</h2>
         <div class="bar" />
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
 
       <div class="feedback-slides">
@@ -24,7 +23,7 @@
                 <div class="single-repair-feedback">
                   <h3>{{ item.author }}</h3>
 
-                  <p v-html="item.text" />
+                  <p style="width: 90%; padding-left: 10%; text-align: center; padding-top: 25px;" v-html="item.text" />
                 </div>
               </div>
             </slick>

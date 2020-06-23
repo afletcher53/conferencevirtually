@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-  <section class="iot-services-area ptb-80">
+  <section id="Services" class="cv-services-area">
     <div class="container">
       <div class="section-title">
         <h2>{{ $store.state.project_services_title }}</h2>
@@ -13,7 +13,8 @@ export default {
         <p>{{ $store.state.project_services_strapline }}</p>
       </div>
 
-      <div class="row">
+      <div
+        class="row">
         <div
           v-for="item in $store.state.project_services"
           :key="item.id"
