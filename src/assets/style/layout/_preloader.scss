@@ -1,0 +1,37 @@
+
+/*================================================
+Preloader CSS
+=================================================*/
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+    background: $accent-color-secondary;
+
+    .spinner {
+        width: 60px;
+        height: 60px;
+        background-color: $white-color;
+        margin: 0 auto;
+        animation: sk-rotateplane 1.2s infinite ease-in-out;
+        position: absolute;
+        right: 0;
+        left: 0;
+        box-shadow: 0 0 70px 0 rgba(0, 0, 0, 0.4);
+        top: 50%;
+        margin-top: -75px;
+    }
+}
+@keyframes sk-rotateplane {
+    0% {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    } 50% {
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    } 100% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+}
+

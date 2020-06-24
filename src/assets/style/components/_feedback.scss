@@ -1,0 +1,310 @@
+
+
+/*================================================
+Feedback CSS
+=================================================*/
+.feedback-area {
+    position: relative;
+    z-index: 1;
+    @include sectionPadding;
+}
+.feedback-slides {
+    position: relative;
+    max-width: 750px;
+    margin: 0 auto;
+
+    .client-feedback {
+        position: relative;
+
+        .single-feedback {
+            background: $white-color;
+            border-radius: 5px;
+            margin-bottom: 60px;
+            position: relative;
+            padding: {
+                left: 170px;
+                right: 40px;
+                top: 40px;
+                bottom: 40px;
+            }
+            .client-img {
+                position: absolute;
+                left: 40px;
+                top: 40px;
+
+                img {
+                    border-radius: 50%;
+                    border: 2px solid $accent-color-secondary;
+                    padding: 3px;
+                    width: auto !important;
+                    display: inline-block !important;
+                }
+            }
+            h3 {
+                font-size: 18px;
+                margin: 0;
+            }
+            span {
+                display: block;
+                color: $accent-color;
+                margin: {
+                    top: 8px;
+                    bottom: 18px;
+                }
+            }
+            p {
+                font-size: 15px;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -25px;
+                width: 50px;
+                height: 50px;
+                background: $white-color;
+                right: 0;
+                margin: 0 auto;
+                transform: rotate(45deg);
+            }
+        }
+    }
+    .client-thumbnails {
+        position: relative;
+        margin: 0 85px;
+
+        .item {
+            .img-fill {
+                cursor: pointer;
+                position: relative;
+                text-align: center;
+
+                img {
+                    opacity: 0.4;
+                    transition: $transition;
+                    display: inline-block;
+                    position: relative;
+                    border: 2px solid $accent-color-secondary;
+                    border-radius: 50%;
+                    padding: 3px;
+                    width: 85px;
+                }
+            }
+            &:hover {
+                .img-fill {
+                    img {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .slick-center {
+            .item {
+                .img-fill {
+                    img {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+.client-thumbnails {
+    .next-arrow, .prev-arrow {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        top: 50%;
+        transform: translateY(-50%);
+        background: transparent;
+        color: #5e5e5e;
+        border: 2px solid #5e5e5e;
+        z-index: 1;
+        border-radius: 50%;
+        line-height: 44px;
+        outline: 0 !important;
+        transition: $transition;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: $gradient-color;
+            opacity: 0;
+            visibility: hidden;
+            transition: $transition;
+            border-radius: 50%;
+        }
+        &:hover {
+            color: $white-color;
+            border-color: $accent-color-secondary;
+
+            &::before {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        svg {
+            width: 18px;
+            height: 18px;
+            position: relative;
+        }
+    }
+    .next-arrow {
+        right: -20px;
+    }
+    .prev-arrow {
+        left: -20px;
+    }
+}
+.testimonials-slides {
+    background-color: #f7fbfe;
+    max-width: 850px;
+    margin: 90px auto 30px;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        position: absolute;
+        left: -30px;
+        top: -30px;
+        width: 260px;
+        height: 260px;
+        content: '';
+        z-index: -1;
+
+    }
+    &::after {
+        position: absolute;
+        right: -30px;
+        bottom: -30px;
+        width: 260px;
+        height: 260px;
+        content: '';
+        z-index: -1;
+
+    }
+    .VueCarousel-pagination {
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        right: 0;
+
+        .VueCarousel-dot-container {
+            margin-top: 0 !important;
+        }
+    }
+}
+.single-feedback-item {
+    padding: 40px 130px 90px;
+    text-align: center;
+    background-color: #f7fbfe;
+    position: relative;
+
+    .client-info {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        text-align: left;
+        max-width: 280px;
+        margin: 0 auto 25px;
+
+        .image {
+            padding-right: 20px;
+
+            img {
+                display: inline-block !important;
+                width: 75px;
+                border-radius: 50%;
+                border: 3px solid $accent-color-secondary;
+            }
+        }
+        .title {
+            h3 {
+                font-size: 18px;
+                margin: 0;
+            }
+            span {
+                display: block;
+                margin-top: 8px;
+                color: $accent-color;
+            }
+        }
+    }
+    p {
+        font-size: 16px;
+        font-style: italic;
+    }
+    &::before {
+        content: "\f11b";
+        color: #d9dcde;
+        font: {
+            family: Flaticon;
+            size: 30px;
+            style: normal;
+            size: 65px;
+        }
+        position: absolute;
+        top: 0;
+        left: 25px;
+    }
+}
+
+
+
+/*================================================
+Repair Feedback CSS
+=================================================*/
+.single-repair-feedback {
+    background: $white-color;
+    border-radius: 5px;
+    margin-bottom: 55px;
+    position: relative;
+    text-align: center;
+
+    padding: {
+        left: 40px;
+        right: 40px;
+        top: 40px;
+        bottom: 40px;
+    }
+
+  
+    p {
+        font-size: 15px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -25px;
+        width: 50px;
+        height: 50px;
+        background: $white-color;
+        right: 0;
+        margin: 0 auto;
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        content: "\f11b";
+        color: #d9dcde;
+
+        font: {
+            family: Flaticon;
+            size: 30px;
+            style: normal;
+            size: 65px;
+        }
+
+        position: absolute;
+        top: 0;
+        left: 25px;
+    }
+}

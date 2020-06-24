@@ -1,0 +1,133 @@
+
+/*================================================
+Boxes CSS
+=================================================*/
+.boxes-area {
+    position: relative;
+    padding-bottom: 80px;
+    margin-top: -130px;
+    z-index: 1;
+}
+.hosting-boxes-area {
+    background-color: $hosting-main-color;
+    margin-top: 0;
+
+    .single-box {
+        padding: {
+            left: 15px;
+            right: 15px;
+        };
+        .icon {
+            line-height: 55px;
+        }
+    }
+}
+.boxes-slides {
+    .single-box {
+        &:hover {
+            transform: translateY(0);
+        }
+    }
+}
+.single-box {
+    border: 1px dashed #cdf1d8;
+    padding: 30px 20px;
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
+    background: $white-color;
+    box-shadow: 0 0 10px rgba(72, 69, 224, 0.1);
+    transition: $transition;
+
+    .icon {
+        display: inline-block;
+        text-align: center;
+        width: 55px;
+        height: 55px;
+        line-height: 70px;
+        background: #cdf1d8;
+        border-radius: 50%;
+        color: $accent-color-secondary;
+        transition: $transition;
+    }
+    h3 {
+        font-size: 18px;
+        margin: {
+            top: 25px;
+            bottom: 15px;
+        }
+        transition: $transition;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        border-radius: 5px;
+        height: 100%;
+        background: $gradient-color;
+        z-index: -1;
+        opacity: 0;
+        visibility: hidden;
+        transition: $transition;
+    }
+    p {
+        transition: $transition;
+    }
+    &.bg-f78acb {
+        border-color: rgba(247, 138, 203, .3);
+
+        .icon {
+            color: #f78acb;
+            background: rgba(247, 138, 203, .3);
+        }
+    }
+    &.bg-c679e3 {
+        border-color: #edc3fc;
+
+        .icon {
+            color: $accent-color;
+            background: #edc3fc;
+        }
+    }
+    &.bg-eb6b3d {
+        border-color: rgba(235, 107, 61, .3);
+
+        .icon {
+            color: #eb6b3d;
+            background: rgba(235, 107, 61, .3);
+        }
+    }
+    &:hover {
+        transform: translateY(-9px);
+        border-color: transparent;
+
+        &::before {
+            opacity: 1;
+            visibility: visible;
+        }
+        .icon {
+            background: $white-color;
+            color: $accent-color-secondary;
+        }
+        h3, p {
+            color: $white-color;
+        }
+        &.bg-f78acb {
+            .icon {
+                color: #f78acb;
+            }
+        }
+        &.bg-c679e3 {
+            .icon {
+                color: $accent-color;
+            }
+        }
+        &.bg-eb6b3d {
+            .icon {
+                color: #eb6b3d;
+            }
+        }
+    }
+}

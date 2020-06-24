@@ -20,7 +20,7 @@ export default {
           :key="item.id"
           class="col-lg-4 col-md-6 col-sm-6"
         >
-          <div class="single-iot-services">
+          <div class="single-services">
             <img
               :src="item.image"
               alt="image"

@@ -41,7 +41,7 @@ export default {
     id="header"
     :class="['headroom navbar-style-two', {'is-sticky': isSticky}]"
   >
-    <div class="startp-nav">
+    <div class="nav">
       <div class="container">
         <nav class="navbar navbar-expand-md navbar-light">
           <router-link

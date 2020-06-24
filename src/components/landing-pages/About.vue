@@ -70,7 +70,6 @@
               <img
                 src="@/assets/img/ACProfile.jpg"
                 alt="image"
-                style="padding-top: 100px;"
               >
             </div>
           </div>
@@ -78,8 +77,6 @@
           <div class="col-lg-6 col-md-12">
             <div class="about-content">
               <div class="section-title">
-                <h2>About Us</h2>
-                <div class="bar" />
                 <p v-html="$store.state.project_about_strapline"></p>
               </div>
             </div>

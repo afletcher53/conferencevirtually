@@ -12,3 +12,5 @@ $gradient-color: linear-gradient(135deg,$hosting-main-color 0%, $accent-color 10
 $gradient-color2: linear-gradient(135deg, $accent-color-secondary 0%, $black-color 100%);
 $transition: .5s;
 
+$sky-gradient: linear-gradient(to bottom, $hosting-main-color, lighten($hosting-main-color, 5%),lighten($hosting-main-color, 10%)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+$pylon-color: lighten($paragraph-color, 10%)

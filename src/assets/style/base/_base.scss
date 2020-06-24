@@ -1,0 +1,114 @@
+
+body {
+    font-family: $font-family;
+    padding: 0;
+    margin: 0;
+    font-size: $font-size;
+    background: $white-color;
+}
+img {
+    max-width: 100%;
+}
+a {
+    color: $black-color;
+    display: inline-block;
+    transition: $transition;
+    text-decoration: none;
+    outline: 0 !important;
+
+    &:hover, &:focus {
+        color: $accent-color-secondary;
+        text-decoration: none;
+    }
+}
+.d-table {
+    width: 100%;
+    height: 100%;
+
+    &-cell {
+        vertical-align: middle;
+    }
+}
+p {
+    color: $paragraph-color;
+    text-align: left;
+    line-height: 1.5;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.cptext {
+    color: $paragraph-color;
+    line-height: 1.9;
+    text-align: left;
+    line-height: 200%;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    color: $black-color;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.ptb-80 {
+    padding: {
+        top: 80px;
+        bottom: 80px;
+    }
+}
+.bg-f7fafd {
+    background-color: $bg-color;
+}
+.bg-f9f6f6 {
+    background-color: $bg-color2;
+}
+.bg-f9fafb {
+    background-color: #f9fafb;
+}
+.bg-0f054b {
+    background-color: #0f054b;
+}
+
+
+blockquote, .blockquote {
+    overflow: hidden;
+    background-color: #fafafa;
+    padding: 50px !important;
+    position: relative;
+    z-index: 1;
+    margin: {
+        bottom: 20px;
+        top: 20px;
+    };
+    p {
+        color: $black-color;
+        line-height: 1.6;
+        margin-bottom: 0;
+        font: {
+            style: italic;
+            weight: 500;
+            size: 20px !important;
+        };
+    }
+    cite {
+        display: none;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background-color: $accent-color-secondary;
+        margin: {
+            top: 20px;
+            bottom: 20px;
+        };
+    }
+}

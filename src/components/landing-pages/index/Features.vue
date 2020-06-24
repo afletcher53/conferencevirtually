@@ -1,7 +1,10 @@
 <template>
-  <!-- Start IoT Features Area -->
   <section class="iot-features-area bg-f7fafd">
     <div class="container">
+      <div class="section-title">
+        <h2>{{ $store.state.project_other_projects }}</h2>
+        <div class="bar" />
+      </div>
       <div class="row align-items-center">
         <div class="col-lg-6 iot-features-content">
           <h3>The Webinar Vet</h3>
@@ -24,6 +27,7 @@
         </div>
       </div>
     </div>
+    
   </section>
   <!-- End IoT Features Area -->
 </template>

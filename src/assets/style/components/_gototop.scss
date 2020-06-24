@@ -1,0 +1,331 @@
+
+/*=============================
+Go Top CSS
+===============================*/
+.go-top {
+	position: fixed;
+	cursor: pointer;
+	bottom: 30px;
+	right: 0;
+	color: $white-color;
+	background-color: $accent-color;
+	z-index: 1;
+	// display: none;
+	width: 45px;
+	text-align: center;
+	height: 45px;
+	border-radius: 10px 0 0 10px;
+	line-height: 61px;
+    transition: $transition;
+
+    &:hover {
+        color: $white-color;
+        background: $accent-color-secondary;
+    }
+}
+
+/*================================================
+Shop CSS
+=================================================*/
+.woocommerce-topbar {
+    background-color: #fcfbfb;
+    padding: 10px 40px;
+    margin-bottom: 30px;
+
+    .woocommerce-topbar-ordering {
+        .form-control {
+            cursor: pointer;
+            background-color: transparent;
+            border-color: #ebebeb;
+            border-radius: 4px;
+        }
+    }
+}
+.single-products {
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+
+    .products-content {
+        margin-top: 20px;
+
+        h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        ul {
+            padding: 0;
+            margin: 10px 0 12px;
+            list-style-type: none;
+
+            li {
+                display: inline-block;
+                color: #eac11d;
+
+                i {
+                    &::before {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        .add-to-cart-btn {
+            display: block;
+            width: 100%;
+            color: $black-color;
+            border: 1px solid $black-color;
+            padding: 10px 15px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+    }
+    .sale-btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: #ff2d2d;
+        color: #fff;
+        width: 55px;
+        height: 55px;
+        line-height: 55px;
+        border-radius: 50%;
+        z-index: 2;
+    }
+    .products-image {
+        overflow: hidden;
+        position: relative;
+
+        img {
+            transition: all 1.5s ease-out;
+            width: 100%;
+        }
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: gray;
+            content: '';
+            transition: $transition;
+            z-index: 1;
+            opacity: 0;
+            visibility: hidden;
+        }
+        ul {
+            padding: 0;
+            z-index: 2;
+            list-style-type: none;
+            margin: 0;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            opacity: 0;
+            visibility: hidden;
+            transition: $transition;
+
+            li {
+                display: inline-block;
+
+                a {
+                    display: block;
+                    background: $white-color;
+                    width: 35px;
+                    height: 35px;
+                    line-height: 35px;
+
+                    svg {
+                        width: 20px;
+                    }
+                    &:hover, &:focus {
+                        background-color: $accent-color-secondary;
+                        color: $white-color;
+                    }
+                    &:nth-child(1) {
+                        margin-left: -15px;
+                    }
+                    &:nth-child(3) {
+                        margin-right: -15px;
+                    }
+                }
+            }
+        }
+    }
+    &:hover, &:focus {
+        .products-content {
+            .add-to-cart-btn {
+                background-color: $black-color;
+                color: $white-color;
+            }
+        }
+        .products-image {
+            img {
+                transform: scale(1.1);
+            }
+            &::before {
+                opacity: .40;
+                visibility: visible;
+            }
+            ul {
+                opacity: 1;
+                visibility: visible;
+
+                li {
+                    a {
+                        &:nth-child(1) {
+                            margin-left: 0;
+                        }
+                        &:nth-child(3) {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+#productsModalCenter {
+    .modal-dialog {
+        max-width: 900px;
+    }
+    .modal-content {
+        border: none;
+        border-radius: 0;
+
+        button.close {
+            position: absolute;
+            right: 2%;
+            display: inline-block;
+            opacity: 1;
+            top: 2%;
+            width: 35px;
+            height: 35px;
+            text-align: center;
+            line-height: 32px;
+            border: 1px solid #eeeeee;
+            border-radius: 50%;
+            outline: 0;
+            transition: $transition;
+
+            span {
+                transition: $transition;
+            }
+            &:hover, &:focus {
+                background-color: $accent-color-secondary;
+                color: $white-color;
+
+                span {
+                    color: $white-color;
+                }
+            }
+        }
+        .products-image {
+            overflow: hidden;
+
+            img {
+                width: 100%;
+            }
+        }
+        .products-content {
+            p {
+                margin-bottom: 20px;
+            }
+            h3 {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            .price {
+                margin-bottom: 15px;
+
+                span {
+                    text-decoration: line-through;
+                    color: $paragraph-color;
+                }
+            }
+            form {
+                .quantity {
+                    display: inline-block;
+                    margin-right: 8px;
+
+                    .input-counter {
+                        max-width: 110px;
+                        min-width: 110px;
+                        text-align: center;
+                        display: inline-block;
+                        position: relative;
+
+                        span {
+                            position: absolute;
+                            top: 0;
+                            background-color: transparent;
+                            cursor: pointer;
+                            color: $paragraph-color;
+                            width: 40px;
+                            height: 100%;
+                            line-height: 47px;
+                            transition: $transition;
+                            padding: 0;
+
+                            &.minus-btn {
+                                left: 0;
+                            }
+                            &.plus-btn {
+                                right: 0;
+                            }
+                            svg {
+                                width: 20px;
+                            }
+                            &:hover {
+                                color: $accent-color-secondary;
+                            }
+                        }
+                        input {
+                            height: 47px;
+                            color: $black-color;
+                            outline: 0;
+                            display: block;
+                            border: none;
+                            background-color: #f8f8f8;
+                            text-align: center;
+                            width: 100%;
+                            font: {
+                                size: 17px;
+                                weight: 500;
+                            }
+                            &::placeholder {
+                                color: $black-color;
+                            }
+                        }
+                    }
+                }
+                button {
+                    background: $accent-color-secondary;
+                    color: $white-color;
+                    border: none;
+                    height: 46px;
+                    padding: 0 20px;
+                    position: relative;
+                    top: -2px;
+                    cursor: pointer;
+                    outline: 0;
+                    transition: $transition;
+
+                    &:hover, &:focus {
+                        background-color: $accent-color;
+                        color: $white-color;
+                    }
+                }
+            }
+            .product-meta {
+                margin-top: 15px;
+
+                span {
+                    display: inline-block;
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+}

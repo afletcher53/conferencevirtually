@@ -1,0 +1,75 @@
+
+/*================================================
+Fun Facts CSS
+=================================================*/
+.funfacts-area {
+    position: relative;
+    z-index: 1;
+    @include sectionPadding;
+
+    .section-title {
+        h2 {
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 37px;
+        }
+    }
+    .map-bg {
+        position: absolute;
+        z-index: -1;
+        top: 120px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+.funfact {
+    text-align: center;
+
+    h3 {
+        color: $accent-color-secondary;
+        font-size: 32px;
+        margin-bottom: 7px;
+    }
+    p {
+        line-height: initial;
+    }
+}
+.contact-cta-box {
+    margin: 80px auto 0;
+    max-width: 600px;
+    border: 1px dashed #ebebeb;
+    padding: 30px 210px 30px 30px;
+    border-radius: 5px;
+    position: relative;
+
+    h3 {
+        font-size: 20px;
+        margin-bottom: 6px;
+    }
+    p {
+        margin-bottom: 0;
+    }
+    .btn {
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        margin-top: -27px;
+
+        &::before, &::after {
+            background: $accent-color-secondary;
+        }
+    }
+    .btn-primary {
+        background: $accent-color;
+        box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
+
+        &:hover, &:focus {
+            box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
+        }
+    }
+}
+
+
+

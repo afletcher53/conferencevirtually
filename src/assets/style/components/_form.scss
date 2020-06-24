@@ -1,0 +1,30 @@
+
+/*form control*/
+.form-group {
+    margin-bottom: 18px;
+}
+label {
+    color: $black-color;
+    font: {
+        size: 15px;
+        weight: 500;
+    }
+    margin-bottom: 10px;
+}
+.form-control {
+    height: 45px;
+    padding: 10px;
+    font-size: 14px;
+    color: $black-color;
+    border: 1px solid #eeeeee;
+    border-radius: 0;
+    background: #eeeeee;
+    transition: $transition;
+
+    &:focus {
+        outline: 0;
+        background: $white-color;
+        box-shadow: unset;
+        border-color: $accent-color-secondary;
+    }
+}

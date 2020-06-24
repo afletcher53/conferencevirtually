@@ -1,0 +1,20 @@
+
+/*owl carousel btn*/
+.VueCarousel {
+    .VueCarousel-dot {
+        width: 15px !important;
+        height: 15px !important;
+        transition: $transition;
+        background: #D6D6D6 !important;
+        outline: 0 !important;
+        padding: 0 !important;
+        margin: {
+            left: 4px;
+            right: 4px;
+            top: 0 !important;
+        };
+        &.VueCarousel-dot--active, &:hover {
+            background-color: $accent-color-secondary !important;
+        }
+    }
+}

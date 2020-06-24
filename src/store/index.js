@@ -6,12 +6,13 @@ Vue.use(Vuex);
 export default new Vuex.Store({
     // state is the same as what would typically go inside of the data object when using Vue without Vuex.
     state: {
-        project_telephone: '07484719158',
+        project_telephone: '0151 324 0580',
         project_email: 'admin@conferencevirtually.com',
         project_address: '16, Liverpool Science Park IC1, The Webinar Vet, 131 Mount Pleasant, Liverpool L3 5TF',
         project_name: 'conferencesvirtually',
         project_name_expanded: 'Conference, <br> Virtually.',
         project_strap_line: 'The current crisis has caused wholesale cancellations of physical conferences, leading to conferences being held online. We are the world leaders in virtual congresses with seven years experience. <br> Introducing Conference, Virtually.',
+        project_other_projects: 'Our Other Projects',
         project_strap_line_condensed: 'The world leader for virtual congresses.',
         project_copywrite_slug: 'Copyright ©2020. All Rights Reserved. Website created by <a href="https://www.aaronfletcher.co.uk">Aaron Fletcher</a>',
         project_landing_video_id: 'IcUo83XpWMI',

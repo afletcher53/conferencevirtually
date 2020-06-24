@@ -1,0 +1,47 @@
+
+/*================================================
+Ready To Talk CSS
+=================================================*/
+.ready-to-talk {
+    text-align: center;
+    position: relative;
+    padding: {
+        top: 80px;
+        bottom: 80px;
+    }
+    background: $gradient-color;
+
+    h3 {
+        font-size: 28px;
+        color: $white-color;
+        text-transform: capitalize;
+        margin-bottom: 15px;
+    }
+    p {
+        color: $white-color;
+        margin-bottom: 20px;
+        font-size: 16px;
+        text-align: center;
+    }
+    .btn {
+        &::before, &::after {
+            background: $white-color;
+        }
+    }
+    .btn-primary {
+        background: $accent-color;
+        box-shadow: 0 5px 20px 0 rgba(198, 121, 227, 0.25);
+
+        &:hover, &:focus {
+            color: $black-color;
+            box-shadow: 0 5px 20px 0 rgba(68, 206, 111, 0.25);
+        }
+    }
+    span {
+        a {
+            margin-left: 15px;
+            color: $white-color;
+            text-decoration: underline;
+        }
+    }
+}

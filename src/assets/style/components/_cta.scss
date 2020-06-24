@@ -1,0 +1,57 @@
+
+/*================================================
+CTA CSS
+=================================================*/
+.cta-area {
+    background: $gradient-color;
+
+    .container {
+        max-width: 945px;
+    }
+}
+.cta-content {
+    h3 {
+        color: $white-color;
+        margin: 0;
+        font: {
+            size: 24px;
+            weight: 600;
+        }
+    }
+}
+.cta-right-content {
+    text-align: right;
+
+    .hosting-price {
+        display: inline-block;
+
+        span {
+            color: #f6fe6a;
+            display: block;
+        }
+        h4 {
+            margin: 10px 0 0;
+            color: $white-color;
+            font-size: 20px;
+        }
+    }
+    .buy-btn {
+        display: inline-block;
+        padding-left: 35px;
+        position: relative;
+        top: -15px;
+
+        .btn-primary {
+            background: $accent-color;
+            box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
+
+            &::after, &::before {
+                background: $white-color;
+                box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
+            }
+            &:hover, &:focus {
+                color: $accent-color-secondary;
+            }
+        }
+    }
+}
