@@ -30,6 +30,31 @@ return {
         <div
           class="home-main-banner"
         >
+        
+<div id="clouds">
+	<div class="cloud x1"></div>
+	<!-- Time for multiple clouds to dance around -->
+	<div class="cloud x2"></div>
+	<div class="cloud x3"></div>
+	<div class="cloud x4"></div>
+	<div class="cloud x5"></div>
+</div>
+          <div class="bird-container bird-container--one">
+            <div class="bird bird--one" />
+          </div>
+	
+          <div class="bird-container bird-container--two">
+            <div class="bird bird--two" />
+          </div>
+	
+          <div class="bird-container bird-container--three">
+            <div class="bird bird--three" />
+          </div>
+	
+          <div class="bird-container bird-container--four">
+            <div class="bird bird--four" />
+          </div>
+	
           <div class="dot" />
           <div class="triangle" />
           <div class="triangle2 hidden-sm" />

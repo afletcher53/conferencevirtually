@@ -130,8 +130,8 @@ Main Banner CSS
     z-index: 1;
     background: $sky-gradient;
     padding-top: 0px;
-    padding: {
-    };
+    overflow-x: hidden;
+    overflow-y: hidden;
     .home-banner-content {
         h1 {
             font: {
