@@ -18,7 +18,7 @@ export default {
         <div
           v-for="item in $store.state.project_services"
           :key="item.id"
-          class="col-lg-4 col-md-6 col-sm-6"
+          class="col-lg-4 col-md-4 col-sm-4"
         >
           <div class="single-services">
             <img

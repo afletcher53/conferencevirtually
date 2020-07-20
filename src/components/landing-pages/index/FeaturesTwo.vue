@@ -1,27 +1,27 @@
 <template>
   <!-- Start IoT Features Area -->
-  <section class="iot-features-area ptb-80">
+  <section class="features">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-lg-6 iot-features-image">
+        <div class="col-lg-6 features-image">
           <img
             v-wow
-            src="@/assets/img/home/logo/holo-vet-500x370.png"
-            class="wow fadeInUp"
+            srcset="@/assets/img/home/logo/simplylocums/simplylocums.png 1x, @/assets/img/home/logo/simplylocums/simplylocums@2x.png 2x, @/assets/img/home/logo/simplylocums/simplylocums@3x.png 3x, @/assets/img/home/logo/simplylocums/simplylocums@4x.png 4x"
+            alt="The Webinar Vet logo"
+             class="wow fadeInUp hidden-large"
             data-wow-delay="0.6s"
-            alt="image"
+            width= "350px"
           >
         </div>
 
-        <div class="col-lg-6 iot-features-content">
-          <h3>HoloVet</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus.</p>
-
+        <div class="col-lg-6 features-content">
+          <h3 v-html="$store.state.project_features_two_title" />
+          <p v-html="$store.state.project_features_two_strapline" />
           <a
-            href="https://www.linkedin.com/search/results/all/?keywords=Holovet"
+            target="_blank"
+            :href="$store.state.project_features_two_url"
             class="btn btn-primary"
-          >Explore More</a>
+          >Find out more</a>
         </div>
       </div>
     </div>

@@ -64,12 +64,16 @@
     <!-- Start About Area -->
     <section class="about-area ptb-80">
       <div class="container">
+        <h2 class="section-title">
+          Our Founder
+        </h2>
         <div class="row">
           <div class="col-lg-6 col-md-12">
             <div class="about-image">
               <img
                 src="@/assets/img/ACProfile.jpg"
                 alt="image"
+                style="border-radius: 3px;"
               >
             </div>
           </div>
@@ -77,7 +81,7 @@
           <div class="col-lg-6 col-md-12">
             <div class="about-content">
               <div class="section-title">
-                <p v-html="$store.state.project_about_strapline"></p>
+                <p v-html="$store.state.project_about_strapline" />
               </div>
             </div>
           </div>
@@ -86,22 +90,24 @@
             <div class="row">
               <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="about-text">
-                  <h3>Our History</h3>
-                  <p>Lorem ipsum dolor sit amet, con se ctetur adipiscing elit. In sagittis eg esta ante, sed viverra nunc tinci dunt nec elei fend et tiram.</p>
+                  <h3>{{ $store.state.project_about_us_history_title }}</h3>
+                  <p v-html="$store.state.project_about_us_history" />
                 </div>
               </div>
 
               <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="about-text">
-                  <h3>Our Mission</h3>
-                  <p>Lorem ipsum dolor sit amet, con se ctetur adipiscing elit. In sagittis eg esta ante, sed viverra nunc tinci dunt nec elei fend et tiram.</p>
+                  <h3>{{ $store.state.project_about_us_mission_title }}</h3>
+                  <p v-html="$store.state.project_about_us_mission" />
                 </div>
               </div>
 
-              <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3">
+              <div
+                class="col-lg-4 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3"
+              >
                 <div class="about-text">
-                  <h3>Who we are</h3>
-                  <p>Lorem ipsum dolor sit amet, con se ctetur adipiscing elit. In sagittis eg esta ante, sed viverra nunc tinci dunt nec elei fend et tiram.</p>
+                  <h3>{{ $store.state.project_about_us_who_we_are_title }}</h3>
+                  <p v-html="$store.state.project_about_us_who_we_are" />
                 </div>
               </div>
             </div>
@@ -119,19 +125,23 @@
         <h3>Ready to talk?</h3>
         <p>Our team is here to answer your questions</p>
         <a
-          href="#"
+          href="#contact"
           class="btn btn-primary"
         >Contact Us</a>
       </div>
     </section>
     <!-- End Ready To Talk Area -->
     <Partner />
+    <Contact />
   </div>
 </template>
 
 <script>
-
+import Contact from "@/components/landing-pages/Contact";
 export default {
-    name: 'AboutStyleOne',
-}
+  name: "AboutStyleOne",
+  components: {
+    Contact,
+  },
+};
 </script>

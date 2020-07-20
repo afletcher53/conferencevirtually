@@ -57,7 +57,7 @@ return {
 	
           <div class="dot" />
           <div class="triangle" />
-          <div class="triangle2 hidden-sm" />
+          <div class="triangle2 hidden-large"/>
           <div class="d-table">
             <div class="d-table-cell">
               <div class="container">
@@ -80,7 +80,7 @@ return {
                     </div>
                   </div>
 
-                  <div class="col-lg-5 col-md-12 hidden-sm">
+                  <div class="col-lg-5 col-md-12 hidden-large">
                     <youtube-media
                       class="youtubeviewer"
                       :player-vars="{
@@ -92,7 +92,7 @@ return {
                     />
                   </div>
                   <div
-                    class="animate-border "
+                    class="animate-border hidden-large "
                   >
                     <span style="left:-25px; top: 75vh;" />
                     <span style="left:-25px; top: 75vh;" />
@@ -101,7 +101,7 @@ return {
                   </div>
 
                   <div
-                    class="animate-border  hidden-sm"
+                    class="animate-border  hidden-large"
                   >
                     <span style="left: 61vw !important;" />
                     <span style="left: 61vw;" />

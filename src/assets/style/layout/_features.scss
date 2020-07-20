@@ -1,19 +1,25 @@
 /*================================================
 IoT Features CSS
 =================================================*/
-.iot-features-content {
-    h3 {
-        font-size: 26px;
-        margin-bottom: 20px;
+.features {
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+    &-content {
+        h3 {
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+    
+        .btn {
+            margin-top: 15px;
+        }
     }
-
-    .btn {
-        margin-top: 15px;
+    
+    &-image {
+        position: relative;
+        text-align: center;
+        width: 30rem;
     }
-}
-
-.iot-features-image {
-    position: relative;
-    text-align: center;
+    
 }
 

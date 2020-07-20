@@ -1,13 +1,15 @@
-
-/*================================================
-Contact CSS
-=================================================*/
+.contact-info-area {
+    margin-top: 10rem;
+}
 .contact-info-box {
+    margin-bottom: 10rem;
     text-align: center;
     transition: .4s;
     box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
-    background: $white-color;
+    background: $sky-gradient;
     padding: 30px;
+    min-height: 225px;
+    border-radius: 3px;
 
     .icon {
         display: inline-block;
@@ -20,36 +22,49 @@ Contact CSS
         color: $accent-color-secondary;
         transition: .4s;
     }
+
     h3 {
         margin: 25px 0 15px;
+        color: $white-color;
+
         font: {
             size: 18px;
         }
     }
+
     p {
         margin-bottom: 0;
+        color: $white-color;
+        text-align: center;
 
+        &:hover {
+            color: $accent-color;
+        }
         a {
-            color: $paragraph-color;
+            color: $white-color;
 
             &:hover {
-                color: $accent-color-secondary;
+                color: $accent-color;
             }
         }
     }
+
     &:hover {
         transform: translateY(-10px);
 
         .icon {
             color: $white-color;
-            background: $accent-color-secondary;
+            background: $accent-color;
         }
     }
 }
+
 #contactForm {
     .btn {
         margin-top: 10px;
     }
 }
 
-
+.mailto{
+    display: block;
+}

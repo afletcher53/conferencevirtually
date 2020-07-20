@@ -16,8 +16,9 @@ export default {
             <div class="logo">
               <a href="/">
                 <img
-                  src="../../assets/img/logo-dark.png"
-                  alt="logo"
+                  srcset="../../assets/img/logos/logo-dark.png 1x, ../../assets/img/logos/logo-dark@2x.png 2x, ../../assets/img/logos/logo-dark@3x.png 3x, ../../assets/img/logos/logo-dark@4x.png 4x"
+                  alt="Website Logo"
+                  width="200px"
                 >
               </a>
             </div>
@@ -37,7 +38,7 @@ export default {
                 </router-link>
               </li>
               <li><a href="#Services">Services</a></li>
-              <li><a href="#FunFacts">FunFacts</a></li>
+              <li><a href="#FunFacts">Statistics</a></li>
               <li>
                 <router-link
                   :to=" { name: 'Videos' }"
@@ -53,7 +54,7 @@ export default {
           <div class="single-footer-widget">
             <h3>Support</h3>
             <ul class="list">
-              <li><a :href="'mailto:' + $store.state.project_email">Contact Us</a></li>
+              <li><a href="about#contact">Contact Us</a></li>
             </ul>
           </div>
         </div>
@@ -73,6 +74,7 @@ export default {
                 :key="social.id"
               >
                 <a
+                  target="_blank"
                   :href="social.to"
                   :class="social.class"
                 ><feather :type="social.class" /></a>
@@ -109,7 +111,6 @@ export default {
         alt="shape"
       >
     </div>
-    <!-- <div class="go-top"><feather type="arrow-up"></feather></div> -->
 
     <back-to-top
       bottom="50px"

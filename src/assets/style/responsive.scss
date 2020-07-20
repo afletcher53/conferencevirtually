@@ -10,7 +10,9 @@ $value_six: 1199px;
 $value_seven: 1550px;
 
 @media only #{$media} and ($feature_max : $value_two) {
-
+    .hidden-large {
+        display: none;
+      }
     .btn {
         font-size: 13px;
         padding: 13px 33px;
@@ -1802,6 +1804,9 @@ $value_seven: 1550px;
 
 @media only #{$media} and ($feature_min : $value_one) and ($feature_max : $value_two) {
 
+    .hidden-large {
+        display: none;
+      }
     .repair-about-content {
         ul {
             li {
@@ -1916,6 +1921,10 @@ $value_seven: 1550px;
 }
 
 @media only #{$media} and ($feature_min : $value_three) and ($feature_max : $value_four) {
+
+    .hidden-large {
+        display: none;
+      }
 
     .startp-nav {
         nav {
@@ -2551,6 +2560,9 @@ $value_seven: 1550px;
 
 @media only #{$media} and ($feature_min : $value_five) and ($feature_max : $value_six) {
 
+    .triangle2{
+        left: 67vw;
+    }
     .main-banner {
         .hero-content {
             h1 {
@@ -2824,7 +2836,6 @@ $value_seven: 1550px;
 }
 
 @media only #{$media} and ($feature_min : $value_seven) {
-
     .iot-banner-image {
         right: 90px;
         top: 56%;
