@@ -3,8 +3,8 @@ import axios from 'axios'
 axios.defaults.baseURL = "https://www.googleapis.com/youtube/v3/search?"
 
 
-let YouTubeApiKey = 'AIzaSyCLWSUfqfDidWf_VDpy6O5cGLj93L35paU'
-let YouTubeChannelId = 'UCRb-5dUzYOio_BE_zQ9Z0xw'
+let YouTubeApiKey = ''
+let YouTubeChannelId = ''
 let YouTubeOrder = 'date'
 let YouTubePart = 'snippet'
 let YouTubeType = 'video, id'

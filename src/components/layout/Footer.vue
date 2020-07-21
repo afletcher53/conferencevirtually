@@ -39,13 +39,13 @@ export default {
               </li>
               <li><a href="#Services">Services</a></li>
               <li><a href="#FunFacts">Statistics</a></li>
-              <li>
+              <!-- <li>
                 <router-link
                   :to=" { name: 'Videos' }"
                 >
                   Videos
                 </router-link>
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>

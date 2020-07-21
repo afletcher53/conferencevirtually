@@ -9,28 +9,28 @@ export default {
         IOdometer
     },
     data() {
-        return {
-            webinars: 10000,
-            hours: 10000000,
-            conferences: 3,
-            customers: 1000 ,
-            email: 'admin@conferencevirtually.com',
+        return {   
+            hours: this.$store.state.project_funfacts_certified_cpd_hours,
+            conferences: this.$store.state.project_funfacts_conferences,
+            customers: this.$store.state.project_funfacts_customers,
+            webinars: 2076,
+            email: this.$store.state.project_email,
           }
     },
     mounted() {
         const that = this;
         setInterval(function() {
             that.webinars += 1;
-        }, 3000);
-        setInterval(function() {
-            that.hours += 1;
         }, 5000);
         setInterval(function() {
+            that.hours += 1;
+        }, 2000);
+        setInterval(function() {
             that.conferences += 1;
-        }, 20000);
+        }, 200000);
         setInterval(function() {
             that.customers += 1;
-        }, 1000);
+        }, 2000);
     }
 }
 </script>
@@ -50,13 +50,15 @@ export default {
         <div class="col-lg-3 col-md-3 col-6 col-sm-3">
           <div class="funfact">
             <h3>
-              <span class="odometer">
+              {{webinars}}
+              <!-- <span class="odometer">
                 <IOdometer
                   class="odometer"
                   :value="webinars"
                   :duration="200"
-                />
-              </span>+
+                /> -->
+              <!-- </span> -->
+              +
             </h3>
             <p style="text-align: center;">Webinars Served</p>
           </div>
@@ -65,13 +67,14 @@ export default {
         <div class="col-lg-3 col-md-3 col-6 col-sm-3">
           <div class="funfact">
             <h3>
-              <span class="odometer">
+              {{hours}}+
+              <!-- <span class="odometer">
                 <IOdometer
                   class="odometer"
                   :value="hours"
                   :duration="200"
                 />
-              </span>+
+              </span>+ -->
             </h3>
             <p style="text-align: center;">Certified CPD Hours</p>
           </div>
@@ -95,13 +98,14 @@ export default {
         <div class="col-lg-3 col-md-3 col-6 col-sm-3">
           <div class="funfact">
             <h3>
-              <span class="odometer">
+              {{customers}}+
+              <!-- <span class="odometer">
                 <IOdometer
                   class="odometer"
                   :value="customers"
                   :duration="200"
                 />
-              </span>+
+              </span>+ -->
             </h3>
             <p style="text-align: center;">Customers</p>
           </div>

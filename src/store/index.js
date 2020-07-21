@@ -6,6 +6,10 @@ Vue.use(Vuex);
 export default new Vuex.Store({
     // state is the same as what would typically go inside of the data object when using Vue without Vuex.
     state: {
+        project_funfacts_customers: 9361,
+        project_funfacts_certified_cpd_hours: 370000,
+        project_funfacts_conferences: 9,
+        project_funfacts_webinars: 256,
         project_telephone: '0151 324 0580',
         project_email: 'admin@conferencevirtually.com',
         project_address: '16, Liverpool Science Park IC1, The Webinar Vet, 131 Mount Pleasant, Liverpool L3 5TF',
