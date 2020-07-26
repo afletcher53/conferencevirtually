@@ -16,7 +16,7 @@ export default new Vuex.Store({
         project_name: 'conferencesvirtually',
         project_name_expanded: 'Conference, <br> Virtually.',
         project_strap_line: 'The current crisis has caused wholesale cancellations of physical conferences, leading to conferences being held online. We are the world leaders in virtual congresses with seven years experience. <br> Introducing Conference, Virtually.',
-        project_other_projects: 'Our Other Companies',
+        project_other_projects: 'Our Other Projects',
         project_strap_line_condensed: 'The world leader for virtual congresses.',
         project_copywrite_slug: 'Copyright ©2020. All Rights Reserved. Website created by <a href="https://www.aaronfletcher.co.uk">Aaron Fletcher</a>',
         project_landing_video_id: 'IcUo83XpWMI',

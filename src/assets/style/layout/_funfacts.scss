@@ -71,5 +71,155 @@ Fun Facts CSS
     }
 }
 
+.ml-feedback-area {
+    background: $white-color;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 50px;
+}
+.single-ml-feedback-item {
+    box-shadow: 0 0 25px 3px rgba(0, 0, 0, 0.04);
+    margin-bottom: 45px;
+    background-color: $white-color;
+    position: relative;
+    padding: 60px 70px 60px 190px;
+    border-radius: 5px;
+
+    .client-info {
+        position: absolute;
+        left: 60px;
+        top: 50%;
+        width: 100px;
+        transform: translateY(-50%);
+        text-align: center;
+
+        img {
+            border-radius: 5px;
+            border: 2px solid #f4f5fe;
+            width: 160px !important;
+            height: auto !important;
+            padding: 5px;
+            display: inline-block !important;
+        }
+        h3 {
+            margin: {
+                bottom: 0;
+                top: 10px;
+            };
+            font: {
+                size: 17px;
+            };
+        }
+        span {
+            display: block;
+            color: $black-color;
+            margin-top: 5px;
+            font-size: 13px;
+        }
+    }
+    p {
+        margin-bottom: 0;
+        color: #4a6f8a;
+    }
+    .rating {
+        margin-top: 10px;
+
+        i {
+            color: #ff612f;
+            width: 18px;
+            margin-right: 3px;
+        }
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        border-radius: 5px;
+        bottom: -15px;
+        background-color: $white-color;
+        box-shadow: 0px 15px 10px -15px rgba(0, 0, 0, 0.04);
+        z-index: -1;
+        margin: {
+            left: 30px;
+            right: 30px;
+        };
+    }
+}
+.ml-feedback-slides {
+    max-width: 750px;
+    margin: -40px auto 30px;
+
+    .single-ml-feedback-item {
+        margin-top: 40px;
+    }
+    .VueCarousel-slide {
+        padding: {
+            left: 50px;
+            right: 50px;
+        };
+    }
+}
 
 
+
+
+
+.ml-feedback-slides {
+    .single-testimonials-item {
+        margin-top: 40px;
+    }
+}
+.user-shape1 {
+    position: absolute;
+    z-index: -1;
+    top: 12%;
+    left: 10%;
+    animation: movebounce 9s linear infinite;
+}
+.user-shape2 {
+    position: absolute;
+    z-index: -1;
+    left: 7%;
+    animation: moveleftbounce 7s linear infinite;
+    top: 47%;
+}
+.user-shape3 {
+    position: absolute;
+    z-index: -1;
+    bottom: 12%;
+    left: 15%;
+    animation: movebounce 5s linear infinite;
+}
+.user-shape4 {
+    position: absolute;
+    z-index: -1;
+    top: 12%;
+    right: 10%;
+    animation: movebounce 9s linear infinite;
+}
+.user-shape5 {
+    position: absolute;
+    z-index: -1;
+    right: 7%;
+    top: 45%;
+    animation: moveleftbounce 7s linear infinite;
+}
+.user-shape6 {
+    position: absolute;
+    z-index: -1;
+    bottom: 12%;
+    right: 15%;
+    animation: movebounce 5s linear infinite;
+}
+.shape9 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+    img {
+        animation: movebounce 5s linear infinite;
+    }
+}

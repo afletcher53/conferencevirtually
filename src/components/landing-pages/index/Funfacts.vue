@@ -17,21 +17,21 @@ export default {
             email: this.$store.state.project_email,
           }
     },
-    mounted() {
-        const that = this;
-        setInterval(function() {
-            that.webinars += 1;
-        }, 5000);
-        setInterval(function() {
-            that.hours += 1;
-        }, 2000);
-        setInterval(function() {
-            that.conferences += 1;
-        }, 200000);
-        setInterval(function() {
-            that.customers += 1;
-        }, 2000);
-    }
+    // mounted() {
+    //     const that = this;
+    //     setInterval(function() {
+    //         that.webinars += 1;
+    //     }, 5000);
+    //     setInterval(function() {
+    //         that.hours += 1;
+    //     }, 2000);
+    //     setInterval(function() {
+    //         that.conferences += 1;
+    //     }, 200000);
+    //     setInterval(function() {
+    //         that.customers += 1;
+    //     }, 2000);
+    // }
 }
 </script>
 
