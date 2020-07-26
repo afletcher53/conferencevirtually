@@ -11,9 +11,11 @@
         <carousel 
           :autoplay="true"
           :loop="true"
-          :smart-speed="1000"
+          :smart-speed="10000"
           :autoplay-speed="true"
-          :autoplay-timeout="5000"
+          :autoplay-timeout="10000"
+          :adjustableHeight=true
+          :autoplayHoverPause=true
           :per-page-custom="[[0, 1],[576, 1],[768, 1],[1024, 1], [1200, 1]]"
         >
           <slide
@@ -26,7 +28,6 @@
                 <img
                   :src="item.logo"
                   alt="image"
-                  width="60px;"
                 ></a>
                 <h3>{{ item.author }}</h3>
                 <a :href="item.link"><span>{{ item.company }}</span></a>
